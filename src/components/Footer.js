@@ -14,15 +14,6 @@ import telegramImg from '@images/social/telegram.png'
 const Footer = () => {
   return (
     <footer className="text-center flex flex-col items-center py-20 mx-auto">
-      <div className='footer-investors section-container'>
-        <h2 className="text-center">Investors</h2>
-        <div className='footer-investors__img-container'>
-          <img src={invest1Img} />
-          <img src={invest2Img} />
-          <img src={invest3Img} />
-          <img src={invest4Img}/>
-        </div>
-      </div>
       <div className='footer_container'>
         <div className='footer-menu-wrapper'>
           <div className='footer-menu-sommelier'>

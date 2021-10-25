@@ -64,7 +64,8 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          "@images": `${__dirname}/src/images`,
+          '@images': `${__dirname}/src/images`,
+          '@helpers': `${__dirname}/src/helpers`,
         },
       },
     },

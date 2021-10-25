@@ -13,69 +13,55 @@ NOTE: by default, type elements should not have top margins
   margin-top: 0;
 }
 
-// NOTE: Use for all <h1> elements
-// Uses the following Figma styles per breakpoint -
-// Mobile: Header / H3;
-// Tablet: Header / H2;
-// Desktop: Header / H1;
-@mixin heading-h1($color: $white, $textAlign: left) {
-  @include font-base($font-family-barlow-bold, normal, 700);
+@mixin text-subtitle($color, $textAlign, $textStyle: bold) {
+  @include font-base($font-family-rubik, normal, $textStyle);
   color: $color;
-  font-size: 35px !important;
-  line-height: 20px;
+  font-size: 20px; // 18px
   text-align: $textAlign;
-  letter-spacing: 0em;
-  @include respond-to(tablet) {
-    font-size: 80px !important;
-  }
-  @include respond-to(desktop) {
-    font-size: 80px !important;
-  }
 }
+
+@mixin text-body($color: $white, $textAlign: center) {
+  @include font-base($font-family-rubik, normal, 500);
+  color: $color;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: $textAlign;
+}
+
+@mixin text-section-title($color: $white, $textAlign: center) {
+  @include font-base($font-family-rubik, normal, bold);
+  color: $color;
+  font-size: 50px;
+  text-align: $textAlign;
+}
+
+@mixin heading-h1($color: $white, $textAlign: left) {
+  @include font-base($font-family-rubik, normal, bold);
+  color: $color;
+  font-size: 50px;
+  text-align: $textAlign;
+}
+
+@mixin heading-h2($color: $white, $textAlign: center) {
+  @include font-base($font-family-barlow-bold, normal, bold);
+  color: $color;
+  font-size: 30px;
+  text-align: $textAlign;
+}
+
+@mixin heading-h3($color: $white, $textAlign: left, $textStyle: italic) {
+  @include font-base($font-family-barlow, $textStyle, 600);
+  color: $color;
+  font-size: 25px;
+  text-align: $textAlign;
+}
+/************************************************************************************/
 
 // NOTE: Use for all <h2> elements
 // Uses the following Figma styles per breakpoint -
 // Mobile: Header / H3;
 // Tablet: Header / H2;
 // Desktop: Header / H1;
-@mixin heading-h2($color: $white, $textAlign: center) {
-  @include font-base($font-family-barlow-bold, normal, 700);
-  color: $color;
-  font-size: 25px !important;
-  line-height: 54px;
-  text-align: $textAlign;
-  letter-spacing: 0em;
-  @include respond-to(tablet) {
-    font-size: 60px !important;
-    line-height: 72px;
-  }
-  @include respond-to(desktop) {
-    font-size: 60px !important;
-    line-height: 72px;
-  }
-}
-
-// NOTE: Use for all <h3> elements
-// Uses the following Figma styles per breakpoint -
-// Mobile: Header / H3;
-// Tablet: Header / H2;
-// Desktop: Header / H1;
-@mixin heading-h3($color: $white, $textAlign: left) {
-  @include font-base($font-family-barlow, normal, 600);
-  color: $color;
-  font-size: 20px !important;
-  line-height: 30px;
-  text-align: $textAlign;
-  letter-spacing: 0em;
-  @include respond-to(tablet) {
-    font-size: 50px !important;
-    line-height: 43px;
-  }
-  @include respond-to(desktop) {
-    font-size: 50px !important;
-    line-height: 43px;
-  }
-}
 
 // NOTE: Use for all <h3> elements
 // Uses the following Figma styles per breakpoint -
@@ -153,17 +139,5 @@ NOTE: by default, type elements should not have top margins
   @include respond-to(desktop) {
     font-size: 20px;
     line-height: 30px;
-  }
-}
-
-@mixin text-body($color: $gray-dark, $textAlign: left) {
-  @include font-base($font-family-source-light, normal, 400);
-  color: $color;
-  font-size: 1.125rem; // 18px
-  letter-spacing: -0.01em;
-  line-height: 149%;
-  text-align: $textAlign;
-  @include respond-to(mobile) {
-    font-size: 1rem; // 16px
   }
 }

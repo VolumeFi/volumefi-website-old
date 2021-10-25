@@ -3,3 +3,169 @@
 .page-container {
     width: 100%;
 }
+
+.section {
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 12px;
+
+    &-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-row {
+        display: flex;
+    }
+
+    &-black {
+        background: black;
+        color: $white;
+    }
+
+    &-white {
+        background: $white;
+        color: $blue-button-bg;
+    }
+
+    &-blue {
+        background: $blue-button-bg;
+        color: $white;
+    }
+}
+
+.page-aboutus {
+    &-top {
+        align-items: center;
+        justify-content: center;
+        height: 478px;
+
+        span {
+            @include text-subtitle($white, center);
+        }
+
+        img {
+            max-width: 673px;
+            width: 100%;
+        }
+
+        p {
+            padding-top: 18px;
+            max-width: 640px;
+            @include text-body($white, center);
+        }
+    }
+
+    &-why {
+        display: flex;
+        padding-bottom: 82px;
+
+        &-left {
+            flex: 1;
+            padding: 129px 20px 0px 20px;
+
+            h1 {
+                @include heading-h1($blue-button-bg, left);
+            }
+            p {
+                padding-top: 58px;
+                @include text-body($blue-button-bg, left);
+                text-transform: capitalize;
+            }
+        }
+        &-right {
+            flex: 1;
+            margin-left: 30px;
+            padding: 144px 20px 0px 20px;
+
+            h3 {
+                @include heading-h3($blue-button-bg, left);
+                margin-bottom: 44px;
+            }
+
+            .practice-area-item {
+                border-radius: 4.77273px;
+                border: 1px solid $blue-button-bg;
+                min-height: 35px;
+                display: flex;
+                align-items: center;
+                padding-left: 17px;
+                padding-right: 17px;
+                width: fit-content;
+                margin-bottom: 4px;
+                @include text-subtitle($blue-button-bg, left, normal);
+            }
+        }
+    }
+
+    &-study {
+        padding: 90px;
+        width: 100%;
+
+        &-top {
+            display: flex;
+            width: 100%;
+        }
+        &-left {
+            flex: 1;
+
+            span {
+                @include text-subtitle($white, left, 400);
+            }
+
+            h2 {
+                @include heading-h2($white, left);
+                line-height: 40px;
+                text-transform: capitalize;
+            }
+
+            p {
+                @include text-body($white, left);
+                line-height: 25px;
+                padding-top: 50px;
+            }
+        }
+
+        &-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 65px;
+            margin-bottom: 30px;
+
+            .case-study-item {
+                border-radius: 4.77273px;
+                border: 1px solid #FFFFFF;
+                width: 243px;
+                height: 239px;
+                padding: 17px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &-title {
+                    @include text-subtitle($white, center, normal);
+                    text-transform: capitalize;
+                }
+
+                &-content {
+                    @include text-body($white, center);
+                    text-transform: capitalize;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

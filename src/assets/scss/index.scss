@@ -4,32 +4,32 @@ body {
   background-color: $light-gray !important;
 }
 
-h1 {
-  @include heading-h1();
-  text-transform: none;
-}
+// h1 {
+//   @include heading-h1();
+//   text-transform: none;
+// }
 
-h2 {
-  @include heading-h2();
-  text-transform: none;
-}
+// h2 {
+//   @include heading-h2();
+//   text-transform: none;
+// }
 
-h3 {
-  @include heading-h3();
-  text-transform: none;
-}
+// h3 {
+//   @include heading-h3();
+//   text-transform: none;
+// }
 
-h4 {
-  @include heading-h4();
-}
+// h4 {
+//   @include heading-h4();
+// }
 
-h5 {
-  @include heading-h5();
-}
+// h5 {
+//   @include heading-h5();
+// }
 
-.text-content {
-  @include text-content();
-}
+// .text-content {
+//   @include text-content();
+// }
 
 .text-button {
   @include text-button();
