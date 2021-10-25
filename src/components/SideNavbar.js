@@ -26,11 +26,11 @@ const SideNavbar = ({ settings, lang, pathname }) => {
     if (url.includes('features')) {
       setMenu('features');
     }
-    if (url.includes('usecases')) {
-      setMenu('usecases');
+    if (url.includes('careers')) {
+      setMenu('careers');
     }
     if (url.includes('about-us')) {
-      setMenu('about');
+      setMenu('about-us');
     }
     if (url.includes('blog')) {
       setMenu('blog');
@@ -72,54 +72,54 @@ const SideNavbar = ({ settings, lang, pathname }) => {
         </div>
         <div>
           <ul className='nav-menu'>
-            <li>
+            {/* <li>
               <Link 
                 className={cn('nav-menu-link', { active: menu === 'resources' })}
                 to={`/features/`}
               >
                 {`Features`}
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link 
-                className={cn('nav-menu-link', { active: menu === 'resources' })}
-                to={`/features/`}
+                className={cn('nav-menu-link', { active: menu === 'careers' })}
+                to={`/careers/`}
               >
                 {`Careers`}
               </Link>
             </li>
             <li>
               <Link 
-                className={cn('nav-menu-link', 'active')}
-                to={`/features/`}
+                className={cn('nav-menu-link', { active: menu === 'about-us' })}
+                to={`/about-us/`}
               >
                 {`About Us`}
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link 
                 className={cn('nav-menu-link', { active: menu === 'resources' })}
                 to={`/features/`}
               >
                 {`Events`}
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link 
                 className={cn('nav-menu-link', { active: menu === 'resources' })}
                 to={`/features/`}
               >
                 {`Community`}
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link 
                 className={cn('nav-menu-link', { active: menu === 'resources' })}
                 to={`/features/`} 
               >
                 {`Blog`}
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

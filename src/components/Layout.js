@@ -6,6 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 //const sbConfig = config.plugins.find((item) => item.resolve === 'gatsby-source-storyblok')
 
 import "../assets/scss/layout.scss"
+import "../assets/scss/main.scss"
 
 import StoryblokService from '../utils/storyblok-service'
 var Mixpanel = require('mixpanel');
