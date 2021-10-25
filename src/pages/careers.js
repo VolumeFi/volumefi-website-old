@@ -1,11 +1,9 @@
 
 import React from "react"
-import Page from '../components/Page'
-import AboutUsPage from '../components/AboutUsPage'
+import Careers from '../components/Careers'
 import Layout from "../components/Layout"
 import { graphql } from 'gatsby'
 import { Router } from '@reach/router'
-import StoryblokService from '../utils/storyblok-service'
 import SEO from "../components/HeadSeo"
 
 export default class extends React.Component {
@@ -22,9 +20,9 @@ export default class extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title={this.state.story ? this.state.story.content.title : "VolumeFi"} description="VolumeFi - About Us" image={this.state.story ? this.state.story.content.image : null}/>
+        <SEO title={this.state.story ? this.state.story.content.title : "VolumeFi"} description="VolumeFi - Careers" image={this.state.story ? this.state.story.content.image : null}/>
         <Router>
-          {this.state.story && <AboutUsPage blok={this.state.story.content} path='/about-us' />}
+          {this.state.story && <Careers blok={this.state.story.content} path='/careers' />}
         </Router>
       </Layout>
     )
@@ -33,7 +31,7 @@ export default class extends React.Component {
 
 export const query = graphql`
   {
-    story: storyblokEntry(full_slug: { eq: "about-us" }) {
+    story: storyblokEntry(full_slug: { eq: "careers" }) {
       name
       content
       full_slug

@@ -13,10 +13,17 @@ NOTE: by default, type elements should not have top margins
   margin-top: 0;
 }
 
+@mixin text-link($color, $textAlign, $textStyle: normal) {
+  @include font-base($font-family-rubik, normal, $textStyle);
+  color: $color;
+  font-size: 22px;
+  text-align: $textAlign;
+}
+
 @mixin text-subtitle($color, $textAlign, $textStyle: bold) {
   @include font-base($font-family-rubik, normal, $textStyle);
   color: $color;
-  font-size: 20px; // 18px
+  font-size: 20px;
   text-align: $textAlign;
 }
 
@@ -56,12 +63,6 @@ NOTE: by default, type elements should not have top margins
   text-align: $textAlign;
 }
 /************************************************************************************/
-
-// NOTE: Use for all <h2> elements
-// Uses the following Figma styles per breakpoint -
-// Mobile: Header / H3;
-// Tablet: Header / H2;
-// Desktop: Header / H1;
 
 // NOTE: Use for all <h3> elements
 // Uses the following Figma styles per breakpoint -

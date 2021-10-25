@@ -169,3 +169,131 @@
         }
     }
 }
+
+.page-careers {
+    &-top {
+        width: 100%;
+        padding: 100px 30px 42px 90px;
+
+        &-left {
+            flex: 11;
+
+            h1 {
+                @include heading-h1($white, left);
+                margin-bottom: 56px;
+            }
+
+            p {
+                @include text-body($white, left);
+                text-transform: capitalize;
+            }
+        }
+
+        &-right {
+            flex: 8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &-call {
+        padding: 108px 91px;
+
+        h2 {
+            @include heading-h2($blue-button-bg, left);
+            text-transform: capitalize;
+            margin-bottom: 62px;
+        }
+
+        p {
+            @include text-body($blue-button-bg, left);
+            text-transform: capitalize;
+        }
+    }
+
+    &-opportunities {
+        padding: 90px;
+
+        &-top {
+            width: 50%;
+
+            h2 {
+                @include heading-h2($white, left);
+                text-transform: capitalize;
+                margin-bottom: 40px;
+            }
+
+            p {
+                @include text-body($white, left);
+                text-transform: capitalize;
+            }
+        }
+
+        &-bottom {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            margin-top: 50px;
+    
+            .opportunity-item {
+                width: 50%;
+                margin-bottom: 35px;
+
+                h3 {
+                    @include heading-h3($white, left, italic);
+                    margin-bottom: 15px;
+                }
+
+                a {
+                    display: block;
+                    @include text-link($white, left);
+                    text-decoration: underline;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+
+    &-team {
+        padding: 80px 147px;
+
+        h2 {
+            @include heading-h2($blue-button-bg, left);
+        }
+
+        .team {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+
+            &-member {
+                width: 26%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+
+                img {
+                    width: 100%;
+                    max-width: 185px;
+                    margin-bottom: 15px;
+                }
+
+                &-name {
+                    @include heading-h3(black, center, bold);
+                }
+
+                &-title {
+                    @include text-subtitle($blue-button-bg, center, normal);
+                }
+            }
+        }
+    }
+}
