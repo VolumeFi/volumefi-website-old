@@ -27,8 +27,8 @@ NOTE: by default, type elements should not have top margins
   text-align: $textAlign;
 }
 
-@mixin text-body($color: $white, $textAlign: center) {
-  @include font-base($font-family-rubik, normal, 500);
+@mixin text-body($color: $white, $textAlign: center, $textStyle: normal) {
+  @include font-base($font-family-rubik, $textStyle, 500);
   color: $color;
   font-size: 15px;
   line-height: 25px;
@@ -50,7 +50,7 @@ NOTE: by default, type elements should not have top margins
 }
 
 @mixin heading-h1($color: $white, $textAlign: left) {
-  @include font-base($font-family-rubik, normal, bold);
+  @include font-base($font-family-rubik-bold, normal, bold);
   color: $color;
   font-size: 50px;
   text-align: $textAlign;

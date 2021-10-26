@@ -103,6 +103,7 @@
     &-study {
         padding: 90px;
         width: 100%;
+        align-items: center;
 
         &-top {
             display: flex;
@@ -144,16 +145,18 @@
             justify-content: space-between;
             margin-top: 65px;
             margin-bottom: 30px;
+            width: 100%;
 
             .case-study-item {
                 border-radius: 4.77273px;
                 border: 1px solid #FFFFFF;
-                width: 243px;
+                flex: 1;
                 height: 239px;
                 padding: 17px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                margin-left: 22px;
 
                 &-title {
                     @include text-subtitle($white, center, normal);
@@ -165,6 +168,10 @@
                     text-transform: capitalize;
                     margin-top: 20px;
                 }
+
+                &:first-child {
+                    margin-left: 0px;
+                }
             }
         }
     }
@@ -173,10 +180,12 @@
 .page-careers {
     &-top {
         width: 100%;
-        padding: 100px 30px 42px 90px;
+        padding: 0px 30px 0px 90px;
 
         &-left {
             flex: 11;
+            padding-top: 100px;
+            padding-bottom: 42px;
 
             h1 {
                 @include heading-h1($white, left);
