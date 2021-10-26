@@ -3,6 +3,9 @@ import SbEditable from 'storyblok-react'
 import {isMobileOnly} from 'react-device-detect'
 import { navigate } from 'gatsby-link';
 
+import imgMask3 from '@images/mask-3.png';
+import imgChevronRight from '@images/chevron-right.png';
+
 const windowGlobal = typeof window !== 'undefined' && window
 
 function getWindowDimensions() {
@@ -13,7 +16,7 @@ function getWindowDimensions() {
   };
 }
 
-const PostsList = ({ blok }) => {
+const BlogPage = ({ blok }) => {
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
@@ -46,9 +49,49 @@ const PostsList = ({ blok }) => {
 
   morePosts.sort(function(a, b) { return a.ordering - b.ordering });
 
+  console.log(featuredPosts);
+
   return (
     <SbEditable content={blok} key={blok._uid}>
-      <div className='blog-container mt-5 mb-5'>
+      <div className='page-container page-blogs'>
+        <div
+          className='section section-black section-column page-blogs-top'
+          style={{ 
+            backgroundImage: `url(${imgMask3})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center center',
+            backgroundSize: 'contain'
+          }}
+        >
+          <h1>Blog</h1>
+        </div>
+        <button className='page-blogs-latestbutton'>
+          <span>The Latest</span>
+          <img src={imgChevronRight} />
+        </button>
+        {featuredPosts.length > 0 && (
+          <div className='section section-white section-column page-blogs-latest'>
+            <img src={featuredPosts[0].content.image} className='page-blogs-latest-img' />
+            <span className='page-blogs-latest-date'>
+              {featuredPosts[0].published_at}
+            </span>
+            <h2 className='page-blogs-latest-title'>
+              {featuredPosts[0].content.title}
+            </h2>
+            <p className='page-blogs-latest-intro'>{featuredPosts[0].content.intro}</p>
+            {/* <div className='mt-5'>
+              <a className='container__featured-section__title' href='#' onClick={(e) => {
+                e.preventDefault()
+                navigate(`/${featuredPosts[0].full_slug}`)
+              }}>
+                {featuredPosts[0].content.title}
+              </a>
+              <p className='container__featured-section__intro mt-3'>{featuredPosts[0].content.intro}</p>
+            </div> */}
+          </div>
+        )}
+      </div>
+      {/* <div className='blog-container mt-5 mb-5'>
         <div className='container__featured-section'>
           <ul>
             {featuredPosts.map((post, index) => {
@@ -57,7 +100,6 @@ const PostsList = ({ blok }) => {
                   <li key={post.full_slug} className='top-post'>
                     <img src={post.content.image}></img>
                     <div className='mt-5'>
-                      {/* <a className='container__featured-section__title' href={`/${post.full_slug}`}> */}
                       <a className='container__featured-section__title' href='#' onClick={(e) => {
                         e.preventDefault()
                         navigate(`/${post.full_slug}`)
@@ -111,34 +153,14 @@ const PostsList = ({ blok }) => {
                       </div>
                     </a>
                   </div>
-                  // <div className='col-12' style={{ border:  '0px', padding: '0px', margin: '0px'}}>
-                  // <ul style={{width: '100%', border:  '0px', padding: '0px', margin: '0px'}}>
-                  // <li key={post.name} style={{width:  '100%', border:  '0px', padding: '0px', margin: '0px'}}>
-                  //   <div className='more-li__content'>
-                  //     <a className='container__more-section__title' href='#' onClick={(e) => {
-                  //       e.preventDefault()
-                  //       navigate(`/${post.full_slug}`)
-                  //     }}>
-                  //       <img src={post.content.image}></img>
-                  //       <div className='mt-2'>
-                  //         {post.content.title}
-                  //       </div>
-                  //       <div className='mt-2'>
-                  //         {post.content.intro}
-                  //       </div>
-                  //     </a>
-                  //   </div>
-                  // </li>
-                  // </ul>
-                  // </div>
                 )
               })}
 
           </div>
         </div>
       )}
-      </div>
+      </div> */}
     </SbEditable>
   )
 }
-export default PostsList
+export default BlogPage

@@ -4,12 +4,14 @@ import Teaser from './Teaser'
 // import Grid from './Grid'
 import Placeholder from './Placeholder'
 import PostsList from './PostList'
+
+import BlogPage from './BlogPage'
 import BlogPost from './BlogPost'
 
 const Components = {
   'teaser': Teaser,
   'blogpost': BlogPost,
-  'posts-list': PostsList,
+  'posts-list': BlogPage,
   'events': PostsList
 }
 

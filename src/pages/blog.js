@@ -55,7 +55,7 @@ export default class extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title={this.state.story ? this.state.story.content.title : "Sommelier"} description="Sommelier is the new Coprocessor for the Ethereum VM" image={this.state.story ? this.state.story.content.image : null}/>
+        <SEO title={this.state.story ? this.state.story.content.title : "VolumeFi"} description="VolumeFi - Blogs" image={this.state.story ? this.state.story.content.image : null}/>
         <Router>
           {this.state.story && <Page blok={this.state.story.content} path='/blog' />}
         </Router>

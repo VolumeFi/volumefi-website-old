@@ -6,6 +6,9 @@ import photoJoyce from '@images/team/joyce.png';
 import photoUnique from '@images/team/unique.png';
 import photoSunand from '@images/team/sunand.png';
 import photoBryan from '@images/team/bryan.png';
+import photoMario from '@images/team/mario.png';
+import photoMantas from '@images/team/mantas.png';
+import photoMichael from '@images/team/michael.png';
 
 import photoBlank from '@images/team/blank.png';
 
@@ -97,28 +100,13 @@ export const team = [
         photo: photoWilliam,
     },
     {
-        name: 'Jack Lu',
-        title: 'UI/UX & Front-End',
-        photo: photoJack,
-    },
-    {
         name: 'Mantas Vidutis',
         title: 'Blockchain Protocols',
-        photo: photoBlank,
+        photo: photoMantas,
     },
     {
         name: 'Erik Mayo',
         title: 'Portfolio Management',
-        photo: photoBlank,
-    },
-    {
-        name: 'Joyce Hermosilla',
-        title: 'UI/UX & Front-End',
-        photo: photoJoyce,
-    },
-    {
-        name: 'Jason Jacobs',
-        title: 'UI/UX & Front-End',
         photo: photoBlank,
     },
     {
@@ -139,6 +127,26 @@ export const team = [
     {
         name: 'Mario Thiel',
         title: 'Marketing, BizDev & Community',
+        photo: photoMario,
+    },
+    {
+        name: 'Jack Lu',
+        title: 'UI/UX & Front-End',
+        photo: photoJack,
+    },
+    {
+        name: 'Joyce Hermosilla',
+        title: 'UI/UX & Front-End',
+        photo: photoJoyce,
+    },
+    {
+        name: 'Jason Jacobs',
+        title: 'UI/UX & Front-End',
         photo: photoBlank,
+    },
+    {
+        name: 'Michael Long',
+        title: 'UI/UX & Front-End',
+        photo: photoMichael,
     },
 ]
