@@ -112,14 +112,14 @@ const SideNavbar = ({ settings, lang, pathname }) => {
                 {`Community`}
               </Link>
             </li> */}
-            {/* <li>
+            <li>
               <Link 
-                className={cn('nav-menu-link', { active: menu === 'resources' })}
-                to={`/features/`} 
+                className={cn('nav-menu-link', { active: menu === 'blog' })}
+                to={`/blog/`} 
               >
                 {`Blog`}
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
       </nav>

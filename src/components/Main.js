@@ -20,7 +20,6 @@ setTimeout(function(){
 
   const fb = document.getElementById('facebook')
 
-
   if (fb) {
     document.getElementById('facebook').setAttribute("href", facebook_url);
     document.getElementById('linkedin').setAttribute("href", linkedin_url);
@@ -61,7 +60,7 @@ export default function Main() {
 
   return (
     <div>
-      ddd
+      
     </div>
   )
 }
