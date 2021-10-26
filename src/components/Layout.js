@@ -54,7 +54,7 @@ export default function Layout({ children, location, lang }){
           </main>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
