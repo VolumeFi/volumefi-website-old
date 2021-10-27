@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Sommelier: The New CoProcessor for Ethereum`,
-    description: `Sommelier is a bet that Ethereum will be a dominant player in the global economy.`,
-    author: `@sommfinance`,
+    title: `VolumeFi`,
+    description: `VolumeFi`,
+    author: `@volumefi`,
     baseUrl: ``, // used to create absolute URLs for
   },
   plugins: [

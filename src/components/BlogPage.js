@@ -5,6 +5,7 @@ import { navigate } from 'gatsby-link';
 
 import imgMask3 from '@images/mask-3.png';
 import imgChevronRight from '@images/chevron-right.png';
+import imgLeftArrow from '@images/left-arrow.png';
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -17,6 +18,9 @@ function getWindowDimensions() {
 }
 
 const BlogPage = ({ blok }) => {
+
+  const [view, setView] = useState('main');
+
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
@@ -54,32 +58,71 @@ const BlogPage = ({ blok }) => {
   return (
     <SbEditable content={blok} key={blok._uid}>
       <div className='page-container page-blogs'>
-        <div
-          className='section section-black section-column page-blogs-top'
-          style={{ 
-            backgroundImage: `url(${imgMask3})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center center',
-            backgroundSize: 'contain'
-          }}
-        >
-          <h1>Blog</h1>
-        </div>
-        <button className='page-blogs-latestbutton'>
-          <span>The Latest</span>
-          <img src={imgChevronRight} />
-        </button>
-        {featuredPosts.length > 0 && (
-          <div className='section section-white section-column page-blogs-latest'>
-            <img src={featuredPosts[0].content.image} className='page-blogs-latest-img' />
-            <span className='page-blogs-latest-date'>
-              {featuredPosts[0].published_at}
-            </span>
-            <h2 className='page-blogs-latest-title'>
-              {featuredPosts[0].content.title}
-            </h2>
-            <p className='page-blogs-latest-intro'>{featuredPosts[0].content.intro}</p>
-          </div>
+        {view === 'main' && (
+          <>
+            <div
+              className='section section-black section-column page-blogs-top'
+              style={{ 
+                backgroundImage: `url(${imgMask3})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center center',
+                backgroundSize: 'contain'
+              }}
+            >
+              <h1>Blog</h1>
+            </div>
+            <button
+              className='page-blogs-latestbutton'
+              onClick={(e) => {
+                setView('list');
+              }}
+            >
+              <span>The Latest</span>
+              <img src={imgChevronRight} />
+            </button>
+            {featuredPosts.length > 0 && (
+              <div className='section section-white section-column page-blogs-latest'>
+                <img src={featuredPosts[0].content.image} className='page-blogs-latest-img' />
+                <span className='page-blogs-latest-date'>
+                  {featuredPosts[0].published_at}
+                </span>
+                <h2 className='page-blogs-latest-title'>
+                  {featuredPosts[0].content.title}
+                </h2>
+                <p className='page-blogs-latest-intro'>{featuredPosts[0].content.intro}</p>
+              </div>
+            )}
+          </>
+        )}
+        {view === 'list' && (
+          <>
+            <div className='section section-white section-column page-blogs-list'>
+              <button
+                className='page-blogs-list-back'
+                onClick={(e) => {
+                  setView('main');
+                }}
+              >
+                <img src={imgLeftArrow} /><span>Blog</span>
+              </button>
+              <h1>The Latest</h1>
+              <div className='blog-list'>
+                {morePosts.reverse().map((post, index) => (
+                  <div className='blog-list-item' key={`blog-item-${index}`}>
+                    <div className='blog-list-item-left'>
+                      <img src={post.content.image} />
+                    </div>
+                    <div className='blog-list-item-right'>
+                      <span className='blog-list-item-date'>{post.published_at}</span>
+                      <h2 className='blog-list-item-title'>{post.content.title}</h2>
+                      <div className='blog-list-item-divider'></div>
+                      <p className='blog-list-item-intro'>{post.content.intro}</p>
+                    </div>
+                </div>
+                ))}
+              </div>
+            </div>
+          </>
         )}
       </div>
     </SbEditable>

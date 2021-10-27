@@ -370,4 +370,86 @@
             text-transform: capitalize;
         }
     }
+
+    &-list {
+        padding: 55px 65px;
+
+        &-back {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: fit-content;
+            border: none;
+            outline: none;
+            background: $white;
+            @include text-subtitle($blue-button-bg, normal);
+            text-decoration: underline;
+            img {
+                height: 16px;
+                margin-right: 10px;
+            }
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            @include heading-h1($blue-button-bg, left);
+        }
+
+        .blog-list {
+            margin-top: 93px;
+            
+            &-item {
+                padding-bottom: 32px;
+                border-bottom: 2px solid #D3D3D3;
+                display: flex;
+                margin-bottom: 48px;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                &-left {
+                    width: 250px;
+
+                    img {
+                        width: 250px;
+                        height: 250px;
+                        background: #D3D3D3;
+                        border-radius: 4.77273px;
+                        object-fit: cover;
+                    }
+                }
+
+                &-right {
+                    flex: 1;
+                    margin-left: 44px;
+                }
+                
+                &-date {
+                    @include text-body($blue-button-bg, left);
+                    line-height: 25px;
+                }
+
+                &-title {
+                    @include heading-h3(black, left, normal);
+                    font-size: 30px;
+                    line-height: 39px;
+                    text-transform: capitalize;
+                }
+
+                &-divider {
+                    width: 35px;
+                    height: 5px;
+                    background: $blue-button-bg;
+                    margin: 15px 0px;
+                }
+
+                &-intro {
+                    @include text-body(black, left);
+                    text-transform: capitalize;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
 }
