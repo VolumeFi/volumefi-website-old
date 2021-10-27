@@ -14,7 +14,7 @@ import photoBlank from '@images/team/blank.png';
 
 export const opportunities = [
     {
-        category: 'Datascience',
+        category: 'Data Science',
         jobs: [
             {
                 title: 'Data Scientist - Remote',
