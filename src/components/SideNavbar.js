@@ -14,7 +14,7 @@ import cn from 'classnames';
 
 const SideNavbar = ({ settings, lang, pathname }) => {
   const [showMenu, setShowMenu] = React.useState(isMobileOnly ? false : true);
-  const [menu, setMenu] = useState('features');
+  const [menu, setMenu] = useState('about-us');
 
   useEffect(() => {
     let url = '';

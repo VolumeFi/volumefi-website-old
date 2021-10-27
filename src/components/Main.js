@@ -1,4 +1,7 @@
 import React, {useEffect, useState} from 'react'
+
+import AboutUsPage from './AboutUsPage';
+
 import Link from 'gatsby-link'
 import Profile from '../components/Profile'
 import {isMobileOnly} from 'react-device-detect'
@@ -59,8 +62,6 @@ export default function Main() {
   }
 
   return (
-    <div>
-      
-    </div>
+    <AboutUsPage />
   )
 }
