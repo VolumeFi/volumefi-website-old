@@ -56,8 +56,8 @@ NOTE: by default, type elements should not have top margins
   text-align: $textAlign;
 }
 
-@mixin heading-h2($color: $white, $textAlign: center) {
-  @include font-base($font-family-barlow-bold, normal, bold);
+@mixin heading-h2($color: $white, $textAlign: center, $textWeight: bold) {
+  @include font-base($font-family-barlow-bold, normal, $textWeight);
   color: $color;
   font-size: 30px;
   text-align: $textAlign;
