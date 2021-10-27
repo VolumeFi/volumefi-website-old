@@ -18,6 +18,10 @@ NOTE: by default, type elements should not have top margins
   color: $color;
   font-size: 22px;
   text-align: $textAlign;
+
+  @include respond-to(mobile) {
+    font-size: 20px;
+  }
 }
 
 @mixin text-subtitle($color, $textAlign, $textStyle: bold) {
@@ -25,6 +29,10 @@ NOTE: by default, type elements should not have top margins
   color: $color;
   font-size: 20px;
   text-align: $textAlign;
+
+  @include respond-to(mobile) {
+    font-size: 17px;
+  }
 }
 
 @mixin text-body($color: $white, $textAlign: center, $textStyle: normal) {
@@ -33,6 +41,10 @@ NOTE: by default, type elements should not have top margins
   font-size: 15px;
   line-height: 25px;
   text-align: $textAlign;
+
+  @include respond-to(mobile) {
+    font-size: 12px;
+  }
 }
 
 @mixin text-section-title($color: $white, $textAlign: center) {
@@ -54,6 +66,10 @@ NOTE: by default, type elements should not have top margins
   color: $color;
   font-size: 50px;
   text-align: $textAlign;
+
+  @include respond-to(mobile) {
+    font-size: 27px;
+  }
 }
 
 @mixin heading-h2($color: $white, $textAlign: center, $textWeight: bold) {
@@ -61,6 +77,10 @@ NOTE: by default, type elements should not have top margins
   color: $color;
   font-size: 30px;
   text-align: $textAlign;
+
+  @include respond-to(mobile) {
+    font-size: 20px;
+  }
 }
 
 @mixin heading-h3($color: $white, $textAlign: left, $textStyle: italic) {
@@ -68,6 +88,10 @@ NOTE: by default, type elements should not have top margins
   color: $color;
   font-size: 25px;
   text-align: $textAlign;
+
+  @include respond-to(mobile) {
+    font-size: 20px;
+  }
 }
 /************************************************************************************/
 

@@ -32,7 +32,6 @@ export default function AboutUsPage() {
   return (
     <div className='page-container page-aboutus'>
       <div className='section section-black section-column page-aboutus-top'>
-        <span>About Us</span>
         <img src={imgLogoBlue} />
         <p>
           Volume delivers software tools and user experiences that increase protocol token

@@ -37,8 +37,18 @@ export default function AboutUsPage() {
 
   return (
     <div className='page-container page-careers'>
-      <div className='section section-black section-row page-careers-top'>
-        <div className='page-careers-top-left'>
+      <div
+        className='section section-black section-row page-careers-top'
+        style={{ 
+          backgroundImage: `url(${imgMask1})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center right -130px',
+          backgroundSize: '80%'
+        }}
+      >
+        <div
+          className='page-careers-top-left'
+        >
           <h1>Innovative Careers</h1>
           <p>Volume’s success arises from its commitment to the pursuit of technology innovation and rapid product iteration aggressively launched into customer hands. Volume believes that a team focused on innovation and rapid customer feedback will continue to learn quickly what features of a protocol are winners and what features should be deprioritized. Careers at Volume are a best fit for those who agitate for results on very difficult distributed computing  and decentralized finance product problems.</p>
         </div>

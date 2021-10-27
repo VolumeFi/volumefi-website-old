@@ -18,7 +18,7 @@ const Footer = () => {
         <div className='footer-top-left'>
           <h2>Let's Connect!</h2>
           <div className='footer-top-social'>
-            <a href='https://t.me/volumefi' target='_blank' className='footer-top-social-item'>
+            <a href='' target='_blank' className='footer-top-social-item'>
               <img src={twitterImg} />
             </a>
             <a href='https://github.com/volumefi' target='_blank' className='footer-top-social-item'>
@@ -27,7 +27,7 @@ const Footer = () => {
             <a href='https://discord.gg/Ebh6YjMShu' target='_blank' className='footer-top-social-item'>
               <img src={discordImg} />
             </a>
-            <a href='' target='_blank' className='footer-top-social-item'>
+            <a href='https://t.me/volumefi' target='_blank' className='footer-top-social-item'>
               <img src={telegramImg} />
             </a>
           </div>

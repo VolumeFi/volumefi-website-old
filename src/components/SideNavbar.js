@@ -96,22 +96,11 @@ const SideNavbar = ({ settings, lang, pathname }) => {
                 {`About Us`}
               </Link>
             </li>
-            {/* <li>
-              <Link 
-                className={cn('nav-menu-link', { active: menu === 'resources' })}
-                to={`/features/`}
-              >
-                {`Events`}
-              </Link>
-            </li> */}
-            {/* <li>
-              <Link 
-                className={cn('nav-menu-link', { active: menu === 'resources' })}
-                to={`/features/`}
-              >
+            <li>
+              <a href='https://t.me/volumefi' className='nav-menu-link' target='_blank'>
                 {`Community`}
-              </Link>
-            </li> */}
+              </a>
+            </li>
             <li>
               <Link 
                 className={cn('nav-menu-link', { active: menu === 'blog' })}

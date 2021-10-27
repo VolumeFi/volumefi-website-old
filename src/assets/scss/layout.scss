@@ -39,8 +39,16 @@
     display: flex;
     padding: 0px 50px;
 
+    @include respond-to(mobile) {
+        padding: 0px 17px;
+    }
+
     &__side {
         width: 338px;
+
+        @include respond-to(mobile) {
+            display: none;
+        }
     }
 
     &__content {
@@ -92,32 +100,70 @@
     padding: 82px 41px;
     margin-top: 52px;
 
+    @include respond-to(mobile) {
+        padding: 82px 41px 52px;
+    }
+
     .footer-top {
         border-bottom: 2px solid $blue-button-bg;
         display: flex;
+
+        @include respond-to(mobile) {
+            flex-direction: column;
+        }
 
         &-left {
             flex: 4;
             padding-bottom: 82px;
             padding-left: 15%;
 
+            @include respond-to(mobile) {
+                padding-left: 0px;
+                padding-bottom: 47px;
+            }
+
             h2 {
-                @include heading-h1($blue-button-bg, left);
+                @include heading-h1($blue-button-bg, center);
+
+                @include respond-to(mobile) {
+                    font-size: 40px;
+                }
             }
         }
 
         &-social {
             margin-top: 44px;
 
+            @include respond-to(mobile) {
+                margin-top: 24px;
+            }
+
+            @include respond-to(mobile) {
+                padding-left: 65px;
+                padding-right: 65px;
+                display: flex;
+                justify-content: space-between;
+            }
+
             img {
                 height: 53px;
                 margin-right: 24px;
+
+                @include respond-to(mobile) {
+                    height: 30px;
+                    margin-right: 0px;
+                }
             }
         }
 
         &-right {
             flex: 3;
             margin-left: 30px;
+
+            @include respond-to(mobile) {
+                margin-left: 0px;
+                padding-bottom: 62px;
+            }
 
             h2 {
                 @include heading-h2($blue-button-bg, left);
@@ -126,6 +172,10 @@
             p {
                 @include text-body($blue-button-bg, left, italic);
                 max-width: 247px;
+
+                @include respond-to(mobile) {
+                    max-width: 100%;
+                }
             }
 
             button {
