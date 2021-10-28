@@ -525,12 +525,20 @@
 
         .blog-list {
             margin-top: 93px;
+
+            @include respond-to(mobile) {
+                margin-top: 40px;
+            }
             
             &-item {
                 padding-bottom: 32px;
                 border-bottom: 2px solid #D3D3D3;
                 display: flex;
                 margin-bottom: 48px;
+
+                @include respond-to(mobile) {
+                    flex-direction: column;
+                }
 
                 &:last-child {
                     border-bottom: none;
@@ -539,18 +547,34 @@
                 &-left {
                     width: 250px;
 
+                    @include respond-to(mobile) {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+
                     img {
                         width: 250px;
                         height: 250px;
                         background: #D3D3D3;
                         border-radius: 4.77273px;
                         object-fit: cover;
+
+                        @include respond-to(mobile) {
+                            width: 100%;
+                            height: fit-content;
+                        }
+        
                     }
                 }
 
                 &-right {
                     flex: 1;
                     margin-left: 44px;
+
+                    @include respond-to(mobile) {
+                        margin-left: 0px;
+                    }
+    
                 }
                 
                 &-date {
@@ -563,6 +587,10 @@
                     font-size: 30px;
                     line-height: 39px;
                     text-transform: capitalize;
+
+                    @include respond-to(mobile) {
+                        line-height: 30px;
+                    }
                 }
 
                 &-divider {
@@ -576,6 +604,10 @@
                     @include text-body(black, left);
                     text-transform: capitalize;
                     line-height: 25px;
+
+                    @include respond-to(mobile) {
+                        line-height: 20px;
+                    }
                 }
             }
         }
