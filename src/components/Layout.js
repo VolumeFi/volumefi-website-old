@@ -43,7 +43,7 @@ export default function Layout({ children, location, lang }){
   return (
     <div className='top-container'>
       <div className='top-bg-fix'></div>
-      <Header />
+      <Header pathname={pathname} />
       <div className='main-container'>
         <div className='main-container__side'>
           <SideNavbar settings={parsedSetting} lang={activeLanguage} pathname={pathname}/>
