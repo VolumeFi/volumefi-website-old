@@ -24,12 +24,93 @@
     justify-content: flex-end;
     align-items: center;
     padding-right: 50px;
+    padding-left: 17px;
+
+    @include respond-to(mobile) {
+        height: 53px;
+        padding-top: 10px;
+        justify-content: space-between;
+    }
+
+    &-mobilebutton {
+        width: 98px;
+        height: 25px;
+        background: $white;
+        border-radius: 3.30168px;
+        display: flex;
+        justify-content: center;
+        z-index: 200;
+
+        @include respond-to(desktop) {
+            display: none;
+        }
+
+        @include respond-to(tablet) {
+            display: none;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
 
     &-item {
         @include font-base($font-family-rubik, normal, 500);
         color: $blue-default;
         font-size: 16px;
         text-decoration: none;
+
+        @include respond-to(mobile) {
+            display: none;
+        }
+    }
+
+    &-mobile {
+        @include respond-to(desktop) {
+            display: none;
+        }
+
+        @include respond-to(tablet) {
+            display: none;
+        }
+
+        &-mask {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            max-width: 100%;
+            height: 200vw;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 100;
+            backdrop-filter: blur(4px);
+        }
+        &-panel {
+            z-index: 200;
+            position: absolute;
+            left: 20px;
+            top: 55px;
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            padding: 8px 17px;
+            border-radius: 4.77273px;
+            height: 35px;
+            background: $white;
+            @include font-base($font-family-rubik, normal, 500);
+            font-size: 19px;
+            color: $black;
+            margin-bottom: 5px;
+            text-decoration: none;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            &.active {
+                background: $blue-button-bg;
+                color: $white
+            }
+        }
     }
 }
 

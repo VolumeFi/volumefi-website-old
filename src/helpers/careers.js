@@ -9,6 +9,8 @@ import photoBryan from '@images/team/bryan.png';
 import photoMario from '@images/team/mario.png';
 import photoMantas from '@images/team/mantas.png';
 import photoMichael from '@images/team/michael.png';
+import photoJason from '@images/team/jason.png';
+import photoErik from '@images/team/erik.png';
 
 import photoBlank from '@images/team/blank.png';
 
@@ -107,7 +109,7 @@ export const team = [
     {
         name: 'Erik Mayo',
         title: 'Portfolio Management',
-        photo: photoBlank,
+        photo: photoErik,
     },
     {
         name: 'Unique Divine',
@@ -142,7 +144,7 @@ export const team = [
     {
         name: 'Jason Jacobs',
         title: 'UI/UX & Front-End',
-        photo: photoBlank,
+        photo: photoJason,
     },
     {
         name: 'Michael Long',
