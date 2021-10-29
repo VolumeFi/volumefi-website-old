@@ -5,7 +5,7 @@ import imgLogo4 from '@images/logo-4.png';
 import imgMask1 from '@images/mask-1.png';
 import imgMask2 from '@images/mask-2.png';
 
-import { opportunities, team } from '@helpers/careers';
+import { opportunities } from '@helpers/careers';
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -83,18 +83,6 @@ export default function AboutUsPage() {
             </div>
           ))}
         </div>
-      </div>
-      <div className='section section-white section-column page-careers-team'>
-          <h2>OUR TEAM</h2>
-          <div className='team'>
-            {team.map((data, index) => (
-              <div className='team-member' index={`team-member-${index}`}>
-                <img src={data.photo} />
-                <span className='team-member-name'>{data.name}</span>
-                <span className='team-member-title'>{data.title}</span>
-              </div>
-            ))}
-          </div>
       </div>
     </div>
   )

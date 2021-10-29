@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react'
 import imgLogoBlue from '@images/logo-blue.png';
 import imgLogo4 from '@images/logo-4.png';
 
-import { ourPracticeAreas, caseStudy } from '@helpers/about-us';
+import { ourPracticeAreas, caseStudy, team } from '@helpers/about-us';
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -78,6 +78,18 @@ export default function AboutUsPage() {
             <div className='case-study-item' key={`our-case-study-${index}`}>
               <h5 className='case-study-item-title'>{data.title}</h5>
               <p className='case-study-item-content'>{data.content}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className='section section-white section-column page-aboutus-team'>
+        <h2>OUR TEAM</h2>
+        <div className='team'>
+          {team.map((data, index) => (
+            <div className='team-member' index={`team-member-${index}`}>
+              <img src={data.photo} />
+              <span className='team-member-name'>{data.name}</span>
+              <span className='team-member-title'>{data.title}</span>
             </div>
           ))}
         </div>

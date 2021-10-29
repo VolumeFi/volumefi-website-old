@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `VolumeFi`,
-    description: `VolumeFi`,
-    author: `@volumefi`,
+    title: `Volume Finance`,
+    description: `Volume delivers software tools and user experiences that increase protocol token utility and community engagement, measured by protocol transaction volume growth`,
+    author: `@volume.finance`,
     baseUrl: ``, // used to create absolute URLs for
   },
   plugins: [
@@ -37,7 +37,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/images/etherium.png`, // This path is relative to the root of the site.
+        icon: `static/images/favicon.png`, // This path is relative to the root of the site.
         gcm_sender_id: `29128146586`
       },
     },

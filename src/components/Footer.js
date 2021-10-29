@@ -1,10 +1,5 @@
 import React from "react"
-import SbEditable from "storyblok-react"
-
-import invest1Img from '@images/investors/invest-1.png'
-import invest2Img from '@images/investors/invest-2.png'
-import invest3Img from '@images/investors/invest-3.png'
-import invest4Img from '@images/investors/invest-4.png'
+import Link from 'gatsby-link'
 
 import twitterImg from '@images/social/twitter.png'
 import githubImg from '@images/social/github.png'
@@ -35,7 +30,9 @@ const Footer = () => {
         <div className='footer-top-right'>
           <h2>Careers</h2>
           <p>Come and work with us! We are always looking for great and intelligent people to join our international team.</p>
-          <button>See innovation Opportunities </button>
+          <Link to={`/careers/`} className='link-innovation-career'>
+            See innovation Opportunities
+          </Link>
         </div>
       </div>
       <div className='footer-bottom'>

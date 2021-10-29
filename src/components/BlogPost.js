@@ -97,7 +97,7 @@ console.log('***morePosts**');
   return (
 
     <SbEditable content={blok} key={blok._uid}>
-    <SEO description="Sommelier is the new Coprocessor for the Ethereum VM" content={blok} />
+    <SEO description="Volume delivers software tools and user experiences that increase protocol token utility and community engagement, measured by protocol transaction volume growth" content={blok} />
       <div className='blog-container mt-5 mb-5'>
         <div className='container__featured-section'>
           <div className='container__featured-section__top'>

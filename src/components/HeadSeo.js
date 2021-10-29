@@ -33,7 +33,7 @@
  
    //console.log('---seo---', metaImage);
  
-   let pageTitle = content ? content.title : "Sommelier";
+   let pageTitle = content ? content.title : "Volume Finance";
    console.log(pageTitle);
  
    return (

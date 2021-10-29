@@ -3,7 +3,7 @@ import SbEditable from "storyblok-react"
 import { render, NODE_IMAGE } from "storyblok-rich-text-react-renderer"
 import { google, outlook, office365, yahoo, ics } from "calendar-link";
 
-import telegramColorImg from '@images/social/telegram-color.png';
+import telegramColorImg from '@images/social/telegram.png';
 
 var validUrl = require('valid-url');
 

@@ -45,7 +45,7 @@ export default class extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title="VolumeFi" description="VolumeFi" image="https://sommelier.finance/images/etherium.png"/>
+        <SEO title="Volume Finance" description="Volume delivers software tools and user experiences that increase protocol token utility and community engagement, measured by protocol transaction volume growth" image="https://volume.finance/images/favicon.png"/>
         <Main />
         {/* <BlogPost blok={this.state.story.content} /> */}
       </Layout>

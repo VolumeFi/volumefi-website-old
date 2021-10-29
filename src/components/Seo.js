@@ -13,8 +13,8 @@
  function SEO({ description, title, image, content }) {
  
  
-   const metaDescription = "Sommelier is the new Coprocessor for the Ethereum VM";
-   const defaultTitle = "Sommelier";
+   const metaDescription = "Volume delivers software tools and user experiences that increase protocol token utility and community engagement, measured by protocol transaction volume growth";
+   const defaultTitle = "Volume Finance";
  
  
    let metaImage = image;

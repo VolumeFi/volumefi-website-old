@@ -85,7 +85,6 @@
             p {
                 padding-top: 58px;
                 @include text-body($blue-button-bg, left);
-                text-transform: capitalize;
 
                 @include respond-to(mobile) {
                     padding-top: 25px;
@@ -220,7 +219,6 @@
 
                 &-content {
                     @include text-body($white, center);
-                    text-transform: capitalize;
                     margin-top: 20px;
                 }
 
@@ -230,146 +228,6 @@
                     @include respond-to(mobile) {
                         margin-left: 18px;
                     }
-                }
-            }
-        }
-    }
-}
-
-.page-careers {
-    &-top {
-        width: 100%;
-        padding: 0px 30px 0px 90px;
-
-        @include respond-to(mobile) {
-            padding: 0px 30px 0px 30px;
-        }
-
-        @include respond-to(desktop) {
-            background-image: none !important;
-        }
-
-        @include respond-to(tablet) {
-            background-image: none !important;
-        }
-
-        &-left {
-            flex: 11;
-            padding-top: 100px;
-            padding-bottom: 42px;
-
-            h1 {
-                @include heading-h1($white, left);
-                margin-bottom: 56px;
-
-                @include respond-to(mobile) {
-                    margin-bottom: 25px;
-                }
-            }
-
-            p {
-                @include text-body($white, left);
-                text-transform: capitalize;
-            }
-        }
-
-        &-right {
-            flex: 8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 30px;
-            padding-top: 80px;
-            padding-bottom: 80px;
-
-            @include respond-to(mobile) {
-                display: none;
-            }
-
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-    &-call {
-        padding: 108px 91px;
-
-        @include respond-to(mobile) {
-            padding: 100px 30px 80px;
-        }
-
-        h2 {
-            @include heading-h2($blue-button-bg, left);
-            text-transform: capitalize;
-            margin-bottom: 62px;
-
-            @include respond-to(mobile) {
-                margin-bottom: 25px;
-            }
-        }
-
-        p {
-            @include text-body($blue-button-bg, left);
-            text-transform: capitalize;
-        }
-    }
-
-    &-opportunities {
-        padding: 90px;
-
-        @include respond-to(mobile) {
-            padding: 100px 30px 80px;
-            background-image: none !important;
-        }
-
-        &-top {
-            width: 50%;
-
-            @include respond-to(mobile) {
-                width: 100%;
-            }
-
-            h2 {
-                @include heading-h2($white, left);
-                text-transform: capitalize;
-                margin-bottom: 40px;
-
-                @include respond-to(mobile) {
-                    margin-bottom: 15px;
-                }
-            }
-
-            p {
-                @include text-body($white, left);
-                text-transform: capitalize;
-            }
-        }
-
-        &-bottom {
-            width: 100%;
-            display: flex;
-            flex-flow: row wrap;
-            margin-top: 50px;
-    
-            .opportunity-item {
-                width: 50%;
-                margin-bottom: 45px;
-
-                @include respond-to(mobile) {
-                    width: 100%;
-                }
-
-                h3 {
-                    @include heading-h3($white, left, italic);
-                    margin-bottom: 15px;
-                }
-
-                a {
-                    display: block;
-                    @include text-link($white, left);
-                    text-decoration: underline;
-                    line-height: 40px;
                 }
             }
         }
@@ -419,6 +277,143 @@
 
                 &-title {
                     @include text-subtitle($blue-button-bg, center, normal);
+                }
+            }
+        }
+    }
+}
+
+.page-careers {
+    &-top {
+        width: 100%;
+        padding: 0px 30px 0px 90px;
+
+        @include respond-to(mobile) {
+            padding: 0px 30px 0px 30px;
+        }
+
+        @include respond-to(desktop) {
+            background-image: none !important;
+        }
+
+        @include respond-to(tablet) {
+            background-image: none !important;
+        }
+
+        &-left {
+            flex: 11;
+            padding-top: 100px;
+            padding-bottom: 42px;
+
+            h1 {
+                @include heading-h1($white, left);
+                margin-bottom: 56px;
+
+                @include respond-to(mobile) {
+                    margin-bottom: 25px;
+                }
+            }
+
+            p {
+                @include text-body($white, left);
+            }
+        }
+
+        &-right {
+            flex: 8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30px;
+            padding-top: 80px;
+            padding-bottom: 80px;
+
+            @include respond-to(mobile) {
+                display: none;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &-call {
+        padding: 108px 91px;
+
+        @include respond-to(mobile) {
+            padding: 100px 30px 80px;
+        }
+
+        h2 {
+            @include heading-h2($blue-button-bg, left);
+            text-transform: capitalize;
+            margin-bottom: 62px;
+
+            @include respond-to(mobile) {
+                margin-bottom: 25px;
+            }
+        }
+
+        p {
+            @include text-body($blue-button-bg, left);
+        }
+    }
+
+    &-opportunities {
+        padding: 90px;
+
+        @include respond-to(mobile) {
+            padding: 100px 30px 80px;
+            background-image: none !important;
+        }
+
+        &-top {
+            width: 50%;
+
+            @include respond-to(mobile) {
+                width: 100%;
+            }
+
+            h2 {
+                @include heading-h2($white, left);
+                text-transform: capitalize;
+                margin-bottom: 40px;
+
+                @include respond-to(mobile) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            p {
+                @include text-body($white, left);
+            }
+        }
+
+        &-bottom {
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            margin-top: 50px;
+    
+            .opportunity-item {
+                width: 50%;
+                margin-bottom: 45px;
+
+                @include respond-to(mobile) {
+                    width: 100%;
+                }
+
+                h3 {
+                    @include heading-h3($white, left, italic);
+                    margin-bottom: 15px;
+                }
+
+                a {
+                    display: block;
+                    @include text-link($white, left);
+                    text-decoration: underline;
+                    line-height: 40px;
                 }
             }
         }
@@ -491,7 +486,6 @@
             @include text-body(black, left);
             line-height: 25px;
             margin-top: 20px;
-            text-transform: capitalize;
         }
     }
 
@@ -602,7 +596,6 @@
 
                 &-intro {
                     @include text-body(black, left);
-                    text-transform: capitalize;
                     line-height: 25px;
 
                     @include respond-to(mobile) {
