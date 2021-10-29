@@ -77,7 +77,7 @@ export default class extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO title="Events" description="Sommelier upcoming events." content={JSON.parse(this.props.pageContext.story.content)}/>
+        <SEO title="Events" description="Volume upcoming events." content={JSON.parse(this.props.pageContext.story.content)}/>
 
           <EventPage blok={this.state} title='Upcoming Events' history={false}  join_community={true} />
 

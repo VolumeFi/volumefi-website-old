@@ -22,7 +22,7 @@ export default class extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title={this.state.story ? this.state.story.content.title : "VolumeFi"} description="VolumeFi - About Us" image={this.state.story ? this.state.story.content.image : null}/>
+        <SEO title={this.state.story ? this.state.story.content.title : "Volume Finance"} description="Volume delivers software tools and user experiences that increase protocol token utility and community engagement, measured by protocol transaction volume growth" image={this.state.story ? this.state.story.content.image : null}/>
         <Router>
           {this.state.story && <AboutUsPage blok={this.state.story.content} path='/about-us' />}
         </Router>

@@ -259,7 +259,10 @@
                 }
             }
 
-            button {
+            .link-innovation-career {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 min-height: 35px;
                 width: 100%;
                 max-width: 300px;

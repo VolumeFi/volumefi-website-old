@@ -48,7 +48,7 @@ export default class extends React.Component {
     //console.log(this.state);
     return (
       <Layout location={this.props.location}>
-        <SEO title="Events" description="Sommelier upcoming events."/>
+        <SEO title="Events" description="Volume upcoming events."/>
         <Router>
           {<EventPage blok={this.state} title='Past Events' history={true} path='/events/history' />}
         </Router>

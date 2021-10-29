@@ -3,17 +3,11 @@ import React, { useState, useEffect } from 'react'
 import SbEditable from 'storyblok-react'
 import {isMobileOnly} from 'react-device-detect'
 
-import logoImg from '@images/logo.png'
-import spiralImg from '@images/spiral-2.png'
-import notificationOffImg from '@images/notification-off.png';
-import notificationOnImg from '@images/notification-on.png';
-
 import logoBlueBlack from '@images/logo-blue-black.png';
 
 import cn from 'classnames';
 
 const SideNavbar = ({ settings, lang, pathname }) => {
-  const [showMenu, setShowMenu] = React.useState(isMobileOnly ? false : true);
   const [menu, setMenu] = useState('about-us');
 
   useEffect(() => {
@@ -43,24 +37,6 @@ const SideNavbar = ({ settings, lang, pathname }) => {
     }
 
   }, []);
-
-  const handleHamburger = () => {
-    setShowMenu(!showMenu)
-  }
-
-  const handleMoveToSection = (e, msgId) => {
-    if (pathname === '/') { // Only apply to home page
-      e.preventDefault();
-      if (isMobileOnly) {
-        setShowMenu(false);
-      }
-      const ref = document.querySelector(`#${msgId}`);
-      if (ref) {
-        ref.scrollIntoView({ behavior: "smooth", block: "center" });
-        setMenu(msgId);
-      }
-    }
-  }
 
   return (
     <div className='sidenavbar-container'>

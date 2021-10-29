@@ -46,7 +46,7 @@ export default class extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-      <SEO description="Sommelier is the new Coprocessor for the Ethereum VM" content={this.state.story.content} />
+      <SEO description="Volume delivers software tools and user experiences that increase protocol token utility and community engagement, measured by protocol transaction volume growth" content={this.state.story.content} />
       <style dangerouslySetInnerHTML={{__html: `
         .blog-container .container__featured-section ul { all: revert; }
       `}}/>

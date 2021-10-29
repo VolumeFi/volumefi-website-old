@@ -35,7 +35,7 @@
  
    //console.log('---seo---', metaImage);
  
-   let pageTitle = metaDescription || "Sommelier";
+   let pageTitle = metaDescription || "Volume Finance";
  
    return (
      <Helmet>

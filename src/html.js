@@ -35,13 +35,13 @@ export default function HTML(props) {
             __html: `{
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Sommelier Finance",
-              alternateName: "Sommelier",
-              url: "https://sommelier.finance/",
-              logo: "https://sommelier.finance/images/etherium.png",
+              name: "Volume Finance",
+              alternateName: "Volume",
+              url: "https://volume.finance/",
+              logo: "https://volume.finance/images/favicon.png",
               sameAs: [
                 "https://twitter.com/sommfinance",
-                "https://sommelier.finance/",
+                "https://volume.finance/",
               ],
             },`
           }}

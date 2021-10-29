@@ -77,9 +77,9 @@ const Header = ({ pathname }) => {
             </div>
           </div>
         )}
-        <Link to={`#features`} className='header-menu-item'>
+        <a href='https://discord.gg/Ebh6YjMShu' target='_blank' className='header-menu-item'>
           {`CONTACT US`}
-        </Link>
+        </a>
       </div>
     </header>
   )
