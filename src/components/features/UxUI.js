@@ -36,7 +36,7 @@ export default function UxUI() {
             <img src={imgSmartContract} />
           </div>
           <div className='page-features-top-right'>
-            <h1>UX/UI & User Growth</h1>
+            <h1>UI/UX & User Growth</h1>
             <p>Creating engaging user-experiences that attract engagement and transaction volume growth are key to the Volume approach. Great portfolio strategies run on effective smart contracts demand great user interfaces and growth measurement. Volume is passionate about measuring user growth in community size and activity.</p>
           </div>
         </div>

@@ -121,6 +121,10 @@
                 width: fit-content;
                 margin-bottom: 4px;
                 @include text-subtitle($blue-button-bg, left, normal);
+
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -611,6 +615,10 @@
 
     .section {
         padding: 50px 69px;
+
+        @include respond-to(mobile) {
+            padding: 30px;
+        }
     }
 
     &-top {
@@ -619,6 +627,11 @@
         align-items: center;
         padding-bottom: 84px;
         border-bottom: 1px solid #FFFFFF;
+
+        @include respond-to(mobile) {
+            flex-direction: column;
+            padding-bottom: 30px;
+        }
 
         &-left {
             flex: 5;
@@ -637,6 +650,10 @@
             h1 {
                 @include heading-h1($white, left);
                 margin-bottom: 53px;
+
+                @include respond-to(mobile) {
+                    margin-bottom: 25px;
+                }
             }
 
             p {
@@ -652,6 +669,15 @@
         flex-flow: row wrap;
         justify-content: center;
 
+        @include respond-to(mobile) {
+            flex-flow: column;
+        }
+
+        @include respond-to(mobile) {
+            padding-top: 42px;
+            padding-bottom: 20px;
+        }
+
         .field-item {
             border: 1px solid #FFFFFF;
             border-radius: 4.77273px;
@@ -663,12 +689,22 @@
 
             @include heading-h3($white, center, normal);
 
+
             &.three {
                 width: 31%;
+
+                @include respond-to(mobile) {
+                    width: 100% !important;
+                }
 
                 &:nth-child(2n) {
                     margin-left: 3.5%;
                     margin-right: 3.5%;
+
+                    @include respond-to(mobile) {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    }
                 }
             }
 
@@ -677,6 +713,12 @@
                 padding: 14px 0px;
                 margin-left: 17px;
                 margin-right: 17px;
+
+                @include respond-to(mobile) {
+                    width: 100% !important;
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
             }
         }
     }

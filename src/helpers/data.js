@@ -34,20 +34,38 @@ export const featureSubMenus = [
         color: 'orange',
     },
     {
-        menu: 'UX-UI',
-        link: '/features/ux-ui',
-        key: 'ux-ui',
+        menu: 'UI/UX',
+        link: '/features/ui-ux',
+        key: 'ui-ux',
         color: 'yellow',
     },
 ]
 
 export const ourPracticeAreas = [
-    'Blockchain Protocols',
-    'DataScience',
-    'Smart contracts & Audits',
-    'Portfolio Management',
-    'UX/UI & Front-End',
-    'Mktg, BizDev & Community'
+    {
+        title: 'Blockchain Protocols',
+        link: '',
+    },
+    {
+        title: 'Data Science',
+        link: '/features/data-science',
+    },
+    {
+        title: 'Smart contracts & Audits',
+        link: '/features/smart-contracts',
+    },
+    {
+        title: 'Portfolio Management',
+        link: '',
+    },
+    {
+        title: 'UI/UX & Front-End',
+        link: '/features/ui-ux',
+    },
+    {
+        title: 'Mktg, BizDev & Community',
+        link: '/features/marketing',
+    },
 ]
 
 export const caseStudy = [
@@ -170,7 +188,7 @@ export const opportunities = [
         ]
     },
     {
-        category: 'UX/UI & Front-End ',
+        category: 'UI/UX & Front-End ',
         jobs: [
             {
                 title: 'Data Scientist - Remote',
