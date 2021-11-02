@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import Link from 'gatsby-link'
 
 import imgLogoBlue from '@images/logo-blue.png';
 import imgLogo4 from '@images/logo-4.png';
@@ -56,9 +57,13 @@ export default function AboutUsPage() {
         <div className='page-aboutus-why-right'>
           <h3>Our Practice Areas</h3>
            {ourPracticeAreas.map((data, index) => (
-             <div className='practice-area-item' key={`practice-area-item-${index}`}>
-               {data}
-             </div>
+             <Link
+              className='practice-area-item'
+              key={`practice-area-item-${index}`}
+              to={data.link}
+            >
+               {data.title}
+             </Link>
            ))}
         </div>
       </div>
