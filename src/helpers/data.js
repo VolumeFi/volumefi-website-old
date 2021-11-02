@@ -14,6 +14,33 @@ import photoErik from '@images/team/erik.png';
 
 import photoBlank from '@images/team/blank.png';
 
+export const featureSubMenus = [
+    {
+        menu: 'Smart Contracts',
+        link: '/features/smart-contracts/',
+        key: 'smart-contracts',
+        color: 'green',
+    },
+    {
+        menu: 'Data Science',
+        link: '/features/data-science/',
+        key: 'data-science',
+        color: 'cyan',
+    },
+    {
+        menu: 'Marketing',
+        link: '/features/marketing/',
+        key: 'marketing',
+        color: 'orange',
+    },
+    {
+        menu: 'UX-UI',
+        link: '/features/ux-ui',
+        key: 'ux-ui',
+        color: 'yellow',
+    },
+]
+
 export const ourPracticeAreas = [
     'Blockchain Protocols',
     'DataScience',
@@ -105,4 +132,75 @@ export const team = [
         photo: photoJason,
     },
   
+]
+
+export const opportunities = [
+    {
+        category: 'Data Science',
+        jobs: [
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+        ]
+    },
+    {
+        category: 'Smart contract & Audits',
+        jobs: [
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+        ]
+    },
+    {
+        category: 'UX/UI & Front-End ',
+        jobs: [
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+        ]
+    },
+    {
+        category: 'Marketing, BizDev & Community',
+        jobs: [
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+            {
+                title: 'Data Scientist - Remote',
+                link: '',
+            },
+        ]
+    }
 ]

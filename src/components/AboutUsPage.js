@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react'
 import imgLogoBlue from '@images/logo-blue.png';
 import imgLogo4 from '@images/logo-4.png';
 
-import { ourPracticeAreas, caseStudy, team } from '@helpers/about-us';
+import { ourPracticeAreas, caseStudy, team } from '@helpers/data';
 
 const windowGlobal = typeof window !== 'undefined' && window
 

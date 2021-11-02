@@ -5,7 +5,7 @@ import imgLogo4 from '@images/logo-4.png';
 import imgMask1 from '@images/mask-1.png';
 import imgMask2 from '@images/mask-2.png';
 
-import { opportunities } from '@helpers/careers';
+import { opportunities } from '@helpers/data';
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -21,7 +21,7 @@ const styleOpportunities = {
   backgroundImage: imgMask2
 }
 
-export default function AboutUsPage() {
+export default function CareersPage() {
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
