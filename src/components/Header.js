@@ -107,7 +107,7 @@ const Header = ({ pathname }) => {
           </div>
         )}
         <a href='https://discord.gg/Ebh6YjMShu' target='_blank' className='header-menu-item'>
-          {`CONTACT US`}
+          {`JOIN THE COMMUNITY`}
         </a>
       </div>
     </header>
