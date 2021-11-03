@@ -137,6 +137,21 @@
                     background: $yellow;
                     color: black;
                 }
+
+                &.magenta {
+                    background: $magenta;
+                    color: black;
+                }
+
+                &.fire {
+                    background: $fire;
+                    color: black;
+                }
+
+                &.purple {
+                    background: $purple;
+                    color: black;
+                }
             }
 
             &:hover {
@@ -225,6 +240,21 @@
 
                 &.yellow {
                     background: $yellow;
+                    color: black;
+                }
+
+                &.magenta {
+                    background: $magenta;
+                    color: black;
+                }
+
+                &.fire {
+                    background: $fire;
+                    color: black;
+                }
+
+                &.purple {
+                    background: $purple;
                     color: black;
                 }
             }

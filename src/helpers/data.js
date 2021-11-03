@@ -39,12 +39,30 @@ export const featureSubMenus = [
         key: 'ui-ux',
         color: 'yellow',
     },
+    {
+        menu: 'Blockchain Protocols',
+        link: '/features/blockchain-protocols',
+        key: 'blockchain-protocols',
+        color: 'magenta',
+    },
+    {
+        menu: 'Data Infrastructure',
+        link: '/features/data-infurastructure',
+        key: 'data-infurastructure',
+        color: 'fire',
+    },
+    {
+        menu: 'Portfolio Management',
+        link: '/features/portfolio-management',
+        key: 'portfolio-management',
+        color: 'purple',
+    },
 ]
 
 export const ourPracticeAreas = [
     {
         title: 'Blockchain Protocols',
-        link: '',
+        link: '/features/blockchain-protocols',
     },
     {
         title: 'Data Science',
@@ -56,7 +74,7 @@ export const ourPracticeAreas = [
     },
     {
         title: 'Portfolio Management',
-        link: '',
+        link: '/features/portfolio-management',
     },
     {
         title: 'UI/UX & Front-End',
@@ -65,6 +83,10 @@ export const ourPracticeAreas = [
     {
         title: 'Mktg, BizDev & Community',
         link: '/features/marketing',
+    },
+    {
+        title: 'Data Infurastructure',
+        link: '/features/data-infurastructure',
     },
 ]
 
