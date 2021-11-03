@@ -36,18 +36,11 @@ const SideNavbar = ({ settings, lang, pathname }) => {
     if (url.includes('blog')) {
       setMenu('blog');
     }
-    if (url.includes('resources')) {
-      setMenu('resources');
-    }
-    if (url.includes('events')) {
-      setMenu('events');
-    }
 
   }, []);
 
   const toggleFeatureMenu = (e) => {
     e.preventDefault();
-    console.log('ddfsdf');
     setFeatureMenuOpen(!featureMenuOpen);
   }
 
@@ -63,7 +56,7 @@ const SideNavbar = ({ settings, lang, pathname }) => {
           <ul className='nav-menu'>
             <li>
               <a                
-                className={cn('nav-menu-link', 'black', { active: featureMenuKeys.includes(menu) || featureMenuOpen})}
+                className={cn('nav-menu-link', 'black', { active: featureMenuKeys.includes(menu) || featureMenuOpen })}
                 onClick={(e) => toggleFeatureMenu(e)}
               >
                 {`Features`}

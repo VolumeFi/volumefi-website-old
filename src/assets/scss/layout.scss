@@ -74,6 +74,10 @@
             display: none;
         }
 
+        .sub-nav-mobile-menu {
+            padding-left: 17px;
+        }
+
         &-mask {
             position: fixed;
             left: 0;
@@ -108,7 +112,35 @@
 
             &.active {
                 background: $blue-button-bg;
-                color: $white
+                color: $white;
+
+                &.black {
+                    background: black;
+                }
+
+                &.green {
+                    background: $green;
+                    color: black;
+                }
+
+                &.cyan {
+                    background: $cyan;
+                    color: black;
+                }
+
+                &.orange {
+                    background: $orange;
+                    color: black;
+                }
+
+                &.yellow {
+                    background: $yellow;
+                    color: black;
+                }
+            }
+
+            &:hover {
+                text-decoration: none;
             }
         }
     }
