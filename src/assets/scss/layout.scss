@@ -288,7 +288,9 @@
         &-left {
             flex: 4;
             padding-bottom: 82px;
-            padding-left: 15%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             @include respond-to(mobile) {
                 padding-left: 0px;
@@ -344,7 +346,7 @@
 
             p {
                 @include text-body($blue-button-bg, left, italic);
-                max-width: 247px;
+                max-width: 287px;
 
                 @include respond-to(mobile) {
                     max-width: 100%;
