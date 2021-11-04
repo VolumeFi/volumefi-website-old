@@ -16,10 +16,16 @@ import photoBlank from '@images/team/blank.png';
 
 export const featureSubMenus = [
     {
-        menu: 'Smart Contracts',
-        link: '/features/smart-contracts/',
-        key: 'smart-contracts',
-        color: 'green',
+        menu: 'Blockchain Protocols',
+        link: '/features/blockchain-protocols',
+        key: 'blockchain-protocols',
+        color: 'magenta',
+    },
+    {
+        menu: 'Data Infrastructure',
+        link: '/features/data-infurastructure',
+        key: 'data-infurastructure',
+        color: 'fire',
     },
     {
         menu: 'Data Science',
@@ -34,28 +40,22 @@ export const featureSubMenus = [
         color: 'orange',
     },
     {
-        menu: 'UI/UX',
-        link: '/features/ui-ux',
-        key: 'ui-ux',
-        color: 'yellow',
-    },
-    {
-        menu: 'Blockchain Protocols',
-        link: '/features/blockchain-protocols',
-        key: 'blockchain-protocols',
-        color: 'magenta',
-    },
-    {
-        menu: 'Data Infrastructure',
-        link: '/features/data-infurastructure',
-        key: 'data-infurastructure',
-        color: 'fire',
-    },
-    {
         menu: 'Portfolio Management',
         link: '/features/portfolio-management',
         key: 'portfolio-management',
         color: 'purple',
+    },
+    {
+        menu: 'Smart Contracts',
+        link: '/features/smart-contracts/',
+        key: 'smart-contracts',
+        color: 'green',
+    },
+    {
+        menu: 'UI/UX',
+        link: '/features/ui-ux',
+        key: 'ui-ux',
+        color: 'yellow',
     },
 ]
 
