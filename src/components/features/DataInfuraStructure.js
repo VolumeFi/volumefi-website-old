@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import imgEmpty from '@images/features/empty.png';
+import imgBg from '@images/features/data-infurastructure.png';
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -33,7 +33,7 @@ export default function DataInfuraStructure() {
       >
         <div className='page-features-top'>
           <div className='page-features-top-left'>
-            <img src={imgEmpty} />
+            <img src={imgBg} />
           </div>
           <div className='page-features-top-right'>
             <h1>Data<br/>Infrastructure</h1>
