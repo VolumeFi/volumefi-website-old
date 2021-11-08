@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import imgEmpty from '@images/features/empty.png';
+import imgBlockchainProtocols from '@images/features/blockchain-protocols.png';
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -33,7 +33,7 @@ export default function BlockchainProtocols() {
       >
         <div className='page-features-top'>
           <div className='page-features-top-left'>
-            <img src={imgEmpty} />
+            <img src={imgBlockchainProtocols} />
           </div>
           <div className='page-features-top-right'>
             <h1>Blockchain<br/> Protocols</h1>

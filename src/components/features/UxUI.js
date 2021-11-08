@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import imgSmartContract from '@images/features/ux-ui.png';
+import imgBg from '@images/features/ui-ux.png';
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -33,7 +33,7 @@ export default function UxUI() {
       >
         <div className='page-features-top'>
           <div className='page-features-top-left'>
-            <img src={imgSmartContract} />
+            <img src={imgBg} />
           </div>
           <div className='page-features-top-right'>
             <h1>UI/UX & User Growth</h1>
