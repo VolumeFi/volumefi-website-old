@@ -74,14 +74,18 @@ export default function CareersPage() {
           <p>Our team is #1 in FinTech across the board and no other Firm can boast the depth and breadth of our experience advising FinTech clients and helping them to achieve best in class results.</p>
         </div>
         <div className='page-careers-opportunities-bottom'>
-          {opportunities.map((data, index) => (
+          <iframe
+            src='https://jobs.lever.co/volume-finance'
+            className='page-careers-opportunities-lever'
+          />
+          {/* {opportunities.map((data, index) => (
             <div className='opportunity-item' key={`opportunity-${index}`}>
               <h3>{data.category}</h3>
               {data.jobs.map((job, index2) => (
                 <a href={job.link} key={`opportunity-${index}-${index2}`}>{job.title}</a>
               ))}
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
