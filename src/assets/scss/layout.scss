@@ -314,8 +314,7 @@
             }
 
             @include respond-to(mobile) {
-                padding-left: 65px;
-                padding-right: 65px;
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
             }
