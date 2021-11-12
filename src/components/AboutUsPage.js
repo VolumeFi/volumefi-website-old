@@ -4,6 +4,8 @@ import Link from 'gatsby-link'
 import imgLogoBlue from '@images/logo-blue.png';
 import imgLogo4 from '@images/logo-4.png';
 
+import imgJoinTeam from '@images/team/you.png';
+
 import { ourPracticeAreas, caseStudy, team } from '@helpers/data';
 
 const windowGlobal = typeof window !== 'undefined' && window
@@ -97,6 +99,12 @@ export default function AboutUsPage() {
               <span className='team-member-title'>{data.title}</span>
             </div>
           ))}
+          <div className='team-member'>
+            <img src={imgJoinTeam} />
+            <Link to='/careers' className='team-member-join'>Join Our Team</Link>
+          </div>
+          <div className='team-member'>
+          </div>
         </div>
       </div>
     </div>
