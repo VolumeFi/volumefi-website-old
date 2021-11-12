@@ -282,6 +282,17 @@
                 &-title {
                     @include text-subtitle($blue-button-bg, center, normal);
                 }
+
+                &-join {
+                    @include text-link($blue-button-bg, center);
+                    border-radius: 4px;
+                    border: 1px solid $blue-button-bg;
+                    padding: 3px 20px;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
             }
         }
     }

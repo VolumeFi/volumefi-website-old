@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from 'react'
 
-import imgLogoBlue from '@images/logo-blue.png';
-import imgLogo4 from '@images/logo-4.png';
 import imgMask1 from '@images/mask-1.png';
 import imgMask2 from '@images/mask-2.png';
 
-import { opportunities } from '@helpers/data';
+// import { opportunities } from '@helpers/data';
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -15,10 +13,6 @@ function getWindowDimensions() {
     width,
     height
   };
-}
-
-const styleOpportunities = {
-  backgroundImage: imgMask2
 }
 
 export default function CareersPage() {
