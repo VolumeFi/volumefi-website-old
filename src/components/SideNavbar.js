@@ -47,11 +47,11 @@ const SideNavbar = ({ settings, lang, pathname }) => {
   return (
     <div className='sidenavbar-container'>
       <nav className='sidenavbar-container-nav' role='navigation'>
-        <div>
+        {/* <div>
           <Link to='/'>
             <img className='sidenavbar-logo black' src={logoBlueBlack} />
           </Link>
-        </div>
+        </div> */}
         <div>
           <ul className='nav-menu'>
             <li>
