@@ -17,40 +17,41 @@
 }
 
 .header-menu {
-    height: 71px;
+    height: 118px;
     width: 100vw;
     max-width: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: space-between;
     padding-right: 50px;
-    padding-left: 17px;
+    padding-left: 20px;
+    padding-top: 47px;
 
     @include respond-to(mobile) {
-        height: 53px;
-        padding-top: 10px;
+        height: 118px;
+        // padding-top: 10px;
         justify-content: space-between;
     }
 
     &-mobilebutton {
-        width: 98px;
-        height: 25px;
+        width: 115px;
+        height: 47px;
         background: $white;
         border-radius: 3.30168px;
         display: flex;
         justify-content: center;
+        align-items: center;
         z-index: 200;
 
-        @include respond-to(desktop) {
-            display: none;
-        }
+        // @include respond-to(desktop) {
+        //     display: none;
+        // }
 
-        @include respond-to(tablet) {
-            display: none;
-        }
+        // @include respond-to(tablet) {
+        //     display: none;
+        // }
 
         img {
-            height: 100%;
+            height: 30.71px;
         }
     }
 
@@ -59,6 +60,7 @@
         color: $blue-default;
         font-size: 16px;
         text-decoration: none;
+        margin-top: 20px;
 
         @include respond-to(mobile) {
             display: none;
@@ -93,7 +95,7 @@
             z-index: 200;
             position: absolute;
             left: 20px;
-            top: 55px;
+            top: 100px;
         }
         &-item {
             display: flex;
@@ -165,14 +167,14 @@
     width: 100vw;
     max-width: 100%;
     display: flex;
-    padding: 0px 50px;
+    padding: 0px 50px 0px 20px;
 
     @include respond-to(mobile) {
         padding: 0px 17px;
     }
 
     &__side {
-        width: 338px;
+        width: 272px;
 
         @include respond-to(mobile) {
             display: none;
@@ -188,7 +190,7 @@
     width: 100%;
 
     .sidenavbar-logo {
-        width: 239px;
+        width: 222px;
     }
 
     &-nav {
@@ -198,7 +200,7 @@
     .nav-menu {
         display: flex;
         flex-direction: column;
-        margin-top: 21px;
+        margin-top: -19px;
 
         &-link {
             display: flex;
