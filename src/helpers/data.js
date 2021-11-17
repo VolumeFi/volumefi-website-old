@@ -148,12 +148,12 @@ export const team = [
     },
     {
         name: 'Unique Divine',
-        title: 'Datasience',
+        title: 'Data Science',
         photo: photoUnique,
     },
     {
         name: 'Sunand Raghupathi',
-        title: 'Datascience',
+        title: 'Data Science',
         photo: photoSunand,
     },
     {
