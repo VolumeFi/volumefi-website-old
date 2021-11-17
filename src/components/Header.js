@@ -64,7 +64,7 @@ const Header = ({ pathname }) => {
             </div>
             <div className='header-menu-mobile-panel'>
               <a 
-                className={cn('header-menu-mobile-item', { active: featureMenuKeys.includes(menu) || featureMenuOpen })}
+                className={cn('header-menu-mobile-item black', { active: featureMenuKeys.includes(menu) || featureMenuOpen })}
                 onClick={(e) => toggleFeatureMenu(e)}
               >
                 {`Features`}
