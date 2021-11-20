@@ -37,7 +37,7 @@ export default function Marketing() {
           </div>
           <div className='page-features-top-right'>
             <h1>Marketing, BizDev, & Community</h1>
-            <p>Smart Contract code must operate well on chain and across chains. Volume’s smart contract and audit teams aim to write and ship well documented and well audited contracts that do what they are supposed to do and do it well.</p>
+            <p>At VolumeFi, we believe that Community is money and that the value of money is the value of the decentralized network. Increased community engagement increases network value and token value. Community members will hold a token they value. The VolumeFi marketing, business development, and community team delivers continuous community engagement communications and governance proposals to grow the network and its volume of transactions.</p>
           </div>
         </div>
         <div className='page-features-bottom'>
