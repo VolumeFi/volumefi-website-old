@@ -37,7 +37,7 @@ export default function DataScience() {
           </div>
           <div className='page-features-top-right'>
             <h1>Data Science</h1>
-            <p>Smart Contract code must operate well on chain and across chains. Volume’s smart contract and audit teams aim to write and ship well documented and well audited contracts that do what they are supposed to do and do it well.</p>
+            <p>Liquidity management and yield generating strategies require data analysis and back-tests to validate both rebalance and reinvestment opportunities. The VolumeFi data science practice explores hypotheses, creates strategies and tests yield predictions that aim to maximize yield, wherever liquidity may move. Blockchain protocols that have successful yield strategies will attract greater liquidity and increased transaction volume growth.</p>
           </div>
         </div>
         <div className='page-features-bottom'>
