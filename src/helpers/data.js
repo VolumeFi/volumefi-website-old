@@ -11,6 +11,9 @@ import photoMantas from '@images/team/mantas.png';
 import photoMichael from '@images/team/michael.png';
 import photoJason from '@images/team/jason.png';
 import photoErik from '@images/team/erik.png';
+import photoKofi from '@images/team/kofi.png';
+import photoVitaliy from '@images/team/vitaliy.png';
+import photoJoseph from '@images/team/joseph.png';
 
 import photoBlank from '@images/team/blank.png';
 
@@ -127,9 +130,14 @@ export const team = [
         photo: photoMichael,
     },
     {
-        name: 'Erik Mayo',
-        title: 'Portfolio Management',
-        photo: photoErik,
+        name: 'Kofi Kessie',
+        title: 'Marketing BizDev & Community',
+        photo: photoKofi,
+    },
+    {
+        name: 'Vitaliy Levit',
+        title: 'Marketing BizDev & Community',
+        photo: photoVitaliy,
     },
     {
         name: 'Mantas Vidutis',
@@ -137,14 +145,19 @@ export const team = [
         photo: photoMantas,
     },
     {
+        name: 'William Chang',
+        title: 'Smart Contracts & Audits',
+        photo: photoWilliam,
+    },
+    {
         name: 'Steven Jung',
         title: 'Smart Contracts & Audits',
         photo: photoSteven,
     },
     {
-        name: 'William Chang',
-        title: 'Smart Contracts & Audits',
-        photo: photoWilliam,
+        name: 'Erik Mayo',
+        title: 'Portfolio Management',
+        photo: photoErik,
     },
     {
         name: 'Unique Divine',
@@ -157,21 +170,25 @@ export const team = [
         photo: photoSunand,
     },
     {
+        name: 'Joseph Terrigno',
+        title: 'Data Science',
+        photo: photoJoseph,
+    },
+    {
         name: 'Jack Lu',
         title: 'UI/UX & Front-End',
         photo: photoJack,
-    },
-    {
-        name: 'Joyce Hermosilla',
-        title: 'UI/UX & Front-End',
-        photo: photoJoyce,
     },
     {
         name: 'Jason Jacobs',
         title: 'UI/UX & Front-End',
         photo: photoJason,
     },
-  
+    {
+        name: 'Joyce Hermosilla',
+        title: 'UI/UX & Front-End',
+        photo: photoJoyce,
+    },
 ]
 
 export const opportunities = [
