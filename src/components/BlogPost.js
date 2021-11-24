@@ -101,19 +101,11 @@ console.log('***morePosts**');
     <SbEditable content={blok} key={blok._uid}>
     <SEO description="Volume delivers software tools and user experiences that increase protocol token utility and community engagement, measured by protocol transaction volume growth" content={blok} />
       <div className='page-container page-blogs'>
-        <div className='section section-white section-column page-blogs-latest page-blogs-details'>
-          {/* <img src={featuredPosts[0].content.image}  />
-          <span className='page-blogs-latest-date'>
-            {featuredPosts[0].published_at}
-          </span>
-          <h2 className='page-blogs-latest-title'>
-            {featuredPosts[0].content.title}
-          </h2>
-          <p className='page-blogs-latest-intro'>{featuredPosts[0].content.intro}</p> */}
-          <img className='page-blogs-latest-img' src={blok.image} />
-          <h1 className='page-blogs-latest-header'>{blok.title}</h1>
-          <p className='page-blogs-latest-title'>{blok.intro}</p>
-          <div className='page-blogs-latest-intro'>
+        <div className='section section-white section-column page-blogs-details'>
+          <img className='page-blogs-details-img' src={blok.image} />
+          <h1 className='page-blogs-details-title'>{blok.title}</h1>
+          <p className='page-blogs-details-subtitle'>{blok.intro}</p>
+          <div className='page-blogs-details-intro'>
             {render(blok.long_text, {
               nodeResolvers: {
                 [NODE_IMAGE]: (children, props) => <img {...props} style={{borderRadius: '0px', width: '100%'}}/>
