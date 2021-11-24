@@ -101,7 +101,7 @@ console.log('***morePosts**');
     <SbEditable content={blok} key={blok._uid}>
     <SEO description="Volume delivers software tools and user experiences that increase protocol token utility and community engagement, measured by protocol transaction volume growth" content={blok} />
       <div className='page-container page-blogs'>
-        <div className='section section-white section-column page-blogs-latest'>
+        <div className='section section-white section-column page-blogs-latest page-blogs-details'>
           {/* <img src={featuredPosts[0].content.image}  />
           <span className='page-blogs-latest-date'>
             {featuredPosts[0].published_at}
