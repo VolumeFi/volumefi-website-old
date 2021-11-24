@@ -498,9 +498,15 @@
             line-height: 25px;
         }
         
+        &-header {
+            @include heading-h1($blue-button-bg, left);
+            text-transform: capitalize;
+        }
+
         &-title {
             @include heading-h2($blue-button-bg, left);
             text-transform: capitalize;
+            cursor: pointer;
         }
 
         &-intro {
@@ -585,6 +591,8 @@
                 &-right {
                     flex: 1;
                     margin-left: 44px;
+                    display: flex;
+                    flex-direction: column;
 
                     @include respond-to(mobile) {
                         margin-left: 0px;
@@ -602,6 +610,7 @@
                     font-size: 30px;
                     line-height: 39px;
                     text-transform: capitalize;
+                    cursor: pointer;
 
                     @include respond-to(mobile) {
                         line-height: 30px;

@@ -4,6 +4,8 @@ import { render, NODE_IMAGE } from "storyblok-rich-text-react-renderer"
 import {isMobileOnly} from 'react-device-detect'
 import { navigate } from 'gatsby-link';
 import SEO from "../components/HeadSeo"
+import { convertDateString } from '../utils/date';
+
 const windowGlobal = typeof window !== 'undefined' && window
 
 // setTimeout(function(){
@@ -98,82 +100,62 @@ console.log('***morePosts**');
 
     <SbEditable content={blok} key={blok._uid}>
     <SEO description="Volume delivers software tools and user experiences that increase protocol token utility and community engagement, measured by protocol transaction volume growth" content={blok} />
-      <div className='blog-container mt-5 mb-5'>
-        <div className='container__featured-section'>
-          <div className='container__featured-section__top'>
-            <div className='social-container'>
-              <a href='notset' target="_blank" id='twitter'><img src='/images/ico-blog-tw.png' alt='Facebook' width='24' /></a>
-              <a href='notset' target="_blank" id='facebook'><img src='/images/ico-blog-fb.png' alt='Twitter' width='24' /></a>
-              <a href='notset' target="_blank" id='linkedin'><img src='/images/ico-blog-li.png' alt='Linked In' width='24' /></a>
-            </div>
-            <div className='container__featured-section__top__post'>
-              <div className='post-container'>
-                <img className="" src={blok.image} />
-                <h1>{blok.title}</h1>
-                <p>{blok.intro}</p>
-                <div className='post-container__content'>
-                  {render(blok.long_text, {
-                    nodeResolvers: {
-                      [NODE_IMAGE]: (children, props) => <img {...props} style={{borderRadius: '0px', width: '100%'}}/>
-                    },
-                    blokResolvers: {
-                      ['YouTube-blogpost']: (props) => (
-                        <div className="embed-responsive embed-responsive-16by9">
-                          <iframe className="embed-responsive-item" src={ "https://www.youtube.com/embed/" + props.YouTube_id.replace('https://youtu.be/', '')  }></iframe>
-                        </div>
-                        )
-                    }
-                  })}
+      <div className='page-container page-blogs'>
+        <div className='section section-white section-column page-blogs-latest'>
+          {/* <img src={featuredPosts[0].content.image}  />
+          <span className='page-blogs-latest-date'>
+            {featuredPosts[0].published_at}
+          </span>
+          <h2 className='page-blogs-latest-title'>
+            {featuredPosts[0].content.title}
+          </h2>
+          <p className='page-blogs-latest-intro'>{featuredPosts[0].content.intro}</p> */}
+          <img className='page-blogs-latest-img' src={blok.image} />
+          <h1 className='page-blogs-latest-header'>{blok.title}</h1>
+          <p className='page-blogs-latest-title'>{blok.intro}</p>
+          <div className='page-blogs-latest-intro'>
+            {render(blok.long_text, {
+              nodeResolvers: {
+                [NODE_IMAGE]: (children, props) => <img {...props} style={{borderRadius: '0px', width: '100%'}}/>
+              },
+              blokResolvers: {
+                ['YouTube-blogpost']: (props) => (
+                  <div className="embed-responsive embed-responsive-16by9">
+                    <iframe className="embed-responsive-item" src={ "https://www.youtube.com/embed/" + props.YouTube_id.replace('https://youtu.be/', '')  }></iframe>
+                  </div>
+                  )
+              }
+            })}
+          </div>
+          {morePosts.reverse().map((post, index) => (
+            <div className='page-blogs-list' style={{ paddingLeft: 0, pddingRight: 0 }}>
+              <h1>Latest Articles</h1>
+              <div className='blog-list'>
+              
+                  <div className='blog-list-item' key={`blog-item-${index}`}>
+                    <div className='blog-list-item-left'>
+                      <img src={post.content.image} />
+                    </div>
+                    <div className='blog-list-item-right'>
+                      <span className='blog-list-item-date'>{convertDateString(post.published_at)}</span>
+                      <a
+                        onClick={(e) => {
+                          e.preventDefault()
+                          navigate(`/${post.full_slug}`)
+                        }}
+                        className='blog-list-item-title'
+                      >
+                        {post.content.title}
+                      </a>
+                      <div className='blog-list-item-divider'></div>
+                      <p className='blog-list-item-intro'>{post.content.intro}</p>
+                    </div>
                 </div>
+              
               </div>
             </div>
-          </div>
+          ))}
         </div>
-        {(morePosts.length > 0) && (
-        <div className='container__more-section'>
-          <p>Latest Articles</p>
-          <div className='container__more-section__content row'>
-
-              {morePosts.reverse().map((post, index) => {
-                return (
-                  <div style={{ width: '100%'}}>
-                    <a className='container__more-section__content-row' href='#' onClick={(e) => {
-                        e.preventDefault()
-                        navigate(`/${post.full_slug}`)
-                    }}>
-                      <img src={post.content.image}></img>
-                      <div className='mt-2 content'>
-                        <div className='title'>{post.content.title}</div>
-                        <div className='intro'>{post.content.intro}</div>
-                      </div>
-                    </a>
-                  </div>
-                  // <div className='col-12' style={{ border:  '0px', padding: '0px', margin: '0px'}}>
-                  // <ul style={{width: '100%', border:  '0px', padding: '0px', margin: '0px'}}>
-                  // <li key={post.name} style={{width:  '100%', border:  '0px', padding: '0px', margin: '0px'}}>
-                  //   <div className='more-li__content'>
-                  //     <a className='container__more-section__title' href='#' onClick={(e) => {
-                  //       e.preventDefault()
-                  //       navigate(`/${post.full_slug}`)
-                  //     }}>
-                  //       <img src={post.content.image}></img>
-                  //       <div className='mt-2'>
-                  //         {post.content.title}
-                  //       </div>
-                  //       <div className='mt-2'>
-                  //         {post.content.intro}
-                  //       </div>
-                  //     </a>
-                  //   </div>
-                  // </li>
-                  // </ul>
-                  // </div>
-                )
-              })}
-
-          </div>
-        </div>
-      )}
       </div>
       {/* <div className="bg-white w-full">
         <div className="max-w-3xl mx-auto text-center pt-20 flex flex-col items-center">
