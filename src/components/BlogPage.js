@@ -7,6 +7,8 @@ import imgMask3 from '@images/mask-3.png';
 import imgChevronRight from '@images/chevron-right.png';
 import imgLeftArrow from '@images/left-arrow.png';
 
+import { convertDateString } from '../utils/date';
+
 const windowGlobal = typeof window !== 'undefined' && window
 
 function getWindowDimensions() {
@@ -35,7 +37,8 @@ const BlogPage = ({ blok }) => {
   );
 
   const featuredPosts = blok.posts.filter(post => post.content && post.content.featured && post.content.featured == true)
-  const morePosts = blok.posts.filter(post => post.content && post.content.featured != null && post.content.featured == false)
+  // const morePosts = blok.posts.filter(post => post.content && post.content.featured != null && post.content.featured == false)
+  const morePosts = blok.posts.filter(post => post.content && post.content.featured != null)
   const moreWidth = windowDimensions.width * morePosts.length
 console.log("*********");
 console.log(featuredPosts);
@@ -55,48 +58,56 @@ console.log(featuredPosts);
 
   morePosts.sort(function(a, b) { return a.ordering - b.ordering });
 
-  console.log(featuredPosts);
+  // console.log('blok posts', blok.posts);
+  // console.log('featured posts', featuredPosts);
+  // console.log('more posts', morePosts);
 
   return (
     <SbEditable content={blok} key={blok._uid}>
       <div className='page-container page-blogs'>
-        {/*{view === 'main' && (*/}
-        {/*  <>*/}
-        {/*    <div*/}
-        {/*      className='section section-black section-column page-blogs-top'*/}
-        {/*      style={{*/}
-        {/*        backgroundImage: `url(${imgMask3})`,*/}
-        {/*        backgroundRepeat: 'no-repeat',*/}
-        {/*        backgroundPosition: 'center center',*/}
-        {/*        backgroundSize: 'contain'*/}
-        {/*      }}*/}
-        {/*    >*/}
-        {/*      <h1>Blog</h1>*/}
-        {/*    </div>*/}
-        {/*    <button*/}
-        {/*      className='page-blogs-latestbutton'*/}
-        {/*      onClick={(e) => {*/}
-        {/*        setView('list');*/}
-        {/*      }}*/}
-        {/*    >*/}
-        {/*      <span>The Latest</span>*/}
-        {/*      <img src={imgChevronRight} />*/}
-        {/*    </button>*/}
-        {/*    {featuredPosts.length > 0 && (*/}
-        {/*      <div className='section section-white section-column page-blogs-latest'>*/}
-        {/*        <img src={featuredPosts[0].content.image} className='page-blogs-latest-img' />*/}
-        {/*        <span className='page-blogs-latest-date'>*/}
-        {/*          {featuredPosts[0].published_at}*/}
-        {/*        </span>*/}
-        {/*        <h2 className='page-blogs-latest-title'>*/}
-        {/*          {featuredPosts[0].content.title}*/}
-        {/*        </h2>*/}
-        {/*        <p className='page-blogs-latest-intro'>{featuredPosts[0].content.intro}</p>*/}
-        {/*      </div>*/}
-        {/*    )}*/}
-        {/*  </>*/}
-        {/*)}*/}
-        {/*{view === 'list' && (*/}
+        {view === 'main' && (
+          <>
+            <div
+              className='section section-black section-column page-blogs-top'
+              style={{ 
+                backgroundImage: `url(${imgMask3})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center center',
+                backgroundSize: 'contain'
+              }}
+            >
+              <h1>Blog</h1>
+            </div>
+            <button
+              className='page-blogs-latestbutton'
+              onClick={(e) => {
+                setView('list');
+              }}
+            >
+              <span>The Latest</span>
+              <img src={imgChevronRight} />
+            </button>
+            {featuredPosts.length > 0 && (
+              <div className='section section-white section-column page-blogs-latest'>
+                <img src={featuredPosts[0].content.image} className='page-blogs-latest-img' />
+                <span className='page-blogs-latest-date'>
+                  {convertDateString(featuredPosts[0].published_at)}
+                </span>
+                <a 
+                  onClick={(e) => {
+                    e.preventDefault()
+                    navigate(`/${featuredPosts[0].full_slug}`)
+                  }}
+                  className='page-blogs-latest-title'
+                >
+                  {featuredPosts[0].content.title}
+                </a>
+                <p className='page-blogs-latest-intro'>{featuredPosts[0].content.intro}</p>
+              </div>
+            )}
+          </>
+        )}
+        {view === 'list' && (
           <>
             <div className='section section-white section-column page-blogs-list'>
               <button
@@ -109,14 +120,22 @@ console.log(featuredPosts);
               </button>
               <h1>The Latest</h1>
               <div className='blog-list'>
-                {featuredPosts.reverse().map((post, index) => (
+                {morePosts.reverse().map((post, index) => (
                   <div className='blog-list-item' key={`blog-item-${index}`}>
                     <div className='blog-list-item-left'>
                       <img src={post.content.image} />
                     </div>
                     <div className='blog-list-item-right'>
-                      <span className='blog-list-item-date'>{post.published_at}</span>
-                      <h2 className='blog-list-item-title'>{post.content.title}</h2>
+                      <span className='blog-list-item-date'>{convertDateString(post.published_at)}</span>
+                      <a
+                        onClick={(e) => {
+                          e.preventDefault()
+                          navigate(`/${post.full_slug}`)
+                        }}
+                        className='blog-list-item-title'
+                      >
+                        {post.content.title}
+                      </a>
                       <div className='blog-list-item-divider'></div>
                       <p className='blog-list-item-intro'>{post.content.intro}</p>
                     </div>
@@ -125,7 +144,7 @@ console.log(featuredPosts);
               </div>
             </div>
           </>
-
+        )}
       </div>
     </SbEditable>
   )
