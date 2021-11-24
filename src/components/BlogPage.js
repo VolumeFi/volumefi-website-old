@@ -115,6 +115,7 @@ console.log(featuredPosts);
                       <img src={post.content.image} />
                     </div>
                     <div className='blog-list-item-right'>
+                      <span className='blog-list-item-date'>{post.published_at}</span>
                       <h2 className='blog-list-item-title'>{post.content.title}</h2>
                       <div className='blog-list-item-divider'></div>
                       <p className='blog-list-item-intro'>{post.content.intro}</p>
