@@ -108,7 +108,7 @@ console.log('***morePosts**');
           <div className='page-blogs-details-intro'>
             {render(blok.long_text, {
               nodeResolvers: {
-                [NODE_IMAGE]: (children, props) => <img {...props} style={{borderRadius: '0px', width: '100%'}}/>
+                [NODE_IMAGE]: (children, props) => <img {...props} style={{borderRadius: '0px', maxWidth: '100%'}}/>
               },
               blokResolvers: {
                 ['YouTube-blogpost']: (props) => (
