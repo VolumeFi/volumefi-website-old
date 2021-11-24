@@ -478,6 +478,14 @@
         }
     }
 
+    &-details {
+        img {
+            max-width: 637px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+
     &-latest {
         border-radius: 0px 0px 4.77273px 4.77273px;
         padding: 99px 73px;
