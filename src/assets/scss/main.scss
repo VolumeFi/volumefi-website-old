@@ -140,10 +140,11 @@
 
         &-top {
             display: flex;
+            flex-direction: column;
             width: 100%;
 
-            @include respond-to(mobile) {
-                flex-direction: column;
+            @include respond-to(desktop) {
+                flex-direction: row;
             }
         }
         &-left {
@@ -167,7 +168,6 @@
         }
 
         &-right {
-            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -178,7 +178,7 @@
             }
 
             img {
-                width: 100%;
+                width: 410px;
 
                 @include respond-to(mobile) {
                     width: 80%;
@@ -188,13 +188,14 @@
 
         &-bottom {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             margin-top: 65px;
             margin-bottom: 30px;
             width: 100%;
 
-            @include respond-to(mobile) {
-                flex-direction: column;
+            @include respond-to(desktop) {
+                flex-direction: row;
             }
 
             .case-study-item {
@@ -202,18 +203,20 @@
                 border: 1px solid #FFFFFF;
                 flex: 1;
                 height: 239px;
-                padding: 17px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                margin-left: 22px;
-
-                @include respond-to(mobile) {
-                    // width: 100%;
-                    margin-left: 18px;
-                    margin-right: 18px;
-                    margin-bottom: 14px;
-                    padding: 32px 17px 17px;
+                
+                margin-left: 18px;
+                margin-right: 18px;
+                margin-bottom: 14px;
+                padding: 32px 17px 17px;
+                    
+                @include respond-to(desktop) {
+                    padding: 17px;
+                    margin-left: 22px;
+                    margin-bottom: 0px;
+                    margin-right: 0px;
                 }
 
                 &-title {
@@ -227,10 +230,10 @@
                 }
 
                 &:first-child {
-                    margin-left: 0px;
+                    margin-left: 18px;
 
-                    @include respond-to(mobile) {
-                        margin-left: 18px;
+                    @include respond-to(desktop) {
+                        margin-left: 0px;
                     }
                 }
             }
