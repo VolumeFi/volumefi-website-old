@@ -74,7 +74,7 @@ export default function AboutUsPage() {
           <div className='page-aboutus-study-left'>
             <span>Case Study</span>
             <h2>Driving Volume on Sommelier ahead of Mainnet and beyond</h2>
-            <p>Volume successfully launched Sommelier’s first iteration as PeggyJV, bringing the Cosmos Ethereum bridge to market and resulted in Sommelier raising a total $25MM in funding to launch the first automated DeFi blockchain to manage Liquidity Provider capital on Ethereum vai the Cosmos.</p>
+            <p>We, at Volume, successfully launched Sommelier’s first iteration as PeggyJV, bringing the Cosmos Ethereum bridge to market and resulted in Sommelier raising a total $25MM in funding to launch the first automated DeFi blockchain to manage Liquidity Provider capital on Ethereum via the Cosmos.</p>
           </div>
           <div className='page-aboutus-study-right'>
             <img src={imgLogo4} />

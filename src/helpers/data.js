@@ -100,11 +100,11 @@ export const caseStudy = [
     },
     {
         title: 'community launch',
-        content: 'Built the first Liquidity Provider Community nurtured ahead of Sommelier mainnet.',
+        content: 'We built the first Liquidity Provider community, nurtured ahead of the Sommelier mainnet.',
     },
     {
         title: 'Product Pipeline',
-        content: 'Created the first pipeline of new Sommelier Cellar strategies to bring to governance.'
+        content: 'We Created the first pipeline of new Sommelier Cellar strategies to bring to governance.'
     }
 ]
 
