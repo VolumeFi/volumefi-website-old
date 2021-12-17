@@ -26,8 +26,8 @@ export const featureSubMenus = [
     },
     {
         menu: 'Data Infrastructure',
-        link: '/features/data-infurastructure',
-        key: 'data-infurastructure',
+        link: '/features/data-infrastructure',
+        key: 'data-infrastructure',
         color: 'fire',
     },
     {
@@ -88,8 +88,8 @@ export const ourPracticeAreas = [
         link: '/features/marketing',
     },
     {
-        title: 'Data Infurastructure',
-        link: '/features/data-infurastructure',
+        title: 'Data infrastructure',
+        link: '/features/data-infrastructure',
     },
 ]
 

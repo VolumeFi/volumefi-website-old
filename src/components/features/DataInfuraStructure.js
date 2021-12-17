@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import imgBg from '@images/features/data-infurastructure.png';
+import imgBg from '@images/features/data-infrastructure.png';
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -12,7 +12,7 @@ function getWindowDimensions() {
   };
 }
 
-export default function DataInfuraStructure() {
+export default function Datainfrastructure() {
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
