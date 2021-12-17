@@ -94,7 +94,7 @@ const Header = ({ pathname }) => {
               >
                 {`About Us`}
               </Link>
-              <a href='https://t.me/volumefi' className='header-menu-mobile-item' target='_blank'>
+              <a href='https://discord.com/invite/Ebh6YjMShu' className='header-menu-mobile-item' target='_blank'>
                 Community
               </a>
               <Link 

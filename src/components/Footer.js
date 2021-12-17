@@ -23,7 +23,7 @@ const Footer = () => {
             <a href='https://discord.gg/Ebh6YjMShu' target='_blank' className='footer-top-social-item'>
               <img src={discordImg} />
             </a>
-            <a href='https://t.me/volumefi' target='_blank' className='footer-top-social-item'>
+            <a href='https://discord.com/invite/Ebh6YjMShu' target='_blank' className='footer-top-social-item'>
               <img src={telegramImg} />
             </a>
             <a href='https://www.linkedin.com/company/volumefi/' target='_blank' className='footer-top-social-item'>

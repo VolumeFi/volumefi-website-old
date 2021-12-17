@@ -92,7 +92,7 @@ const SideNavbar = ({ settings, lang, pathname }) => {
               </Link>
             </li>
             <li>
-              <a href='https://t.me/volumefi' className='nav-menu-link' target='_blank'>
+              <a href='https://discord.com/invite/Ebh6YjMShu' className='nav-menu-link' target='_blank'>
                 {`Community`}
               </a>
             </li>
