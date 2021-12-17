@@ -12,7 +12,7 @@ function getWindowDimensions() {
   };
 }
 
-export default function Datainfrastructure() {
+export default function DataInfrastructure() {
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
