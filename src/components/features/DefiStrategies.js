@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import imgBg from '@images/features/portfolio-manager.png';
+import imgBg from '@images/features/defi-strategies.png';
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -12,7 +12,7 @@ function getWindowDimensions() {
   };
 }
 
-export default function PortfolioManagement() {
+export default function DefiStrategies() {
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
@@ -36,7 +36,7 @@ export default function PortfolioManagement() {
             <img src={imgBg} />
           </div>
           <div className='page-features-top-right'>
-            <h1>DeFi<br/>Strategies</h1>
+            <h1>DeFi Strategies</h1>
             <p>Volume’s team understands that the volume of transactions on the blockchain are exchange-based transactions. New strategies to drive volume will be based on portfolio management strategies as well as market making expertise. Volume’s practice to focus on capturing volume through exchange is a key differentiator for the team.</p>
           </div>
         </div>
