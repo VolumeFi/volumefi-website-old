@@ -43,9 +43,9 @@ export const featureSubMenus = [
         color: 'orange',
     },
     {
-        menu: 'Portfolio Management',
-        link: '/features/portfolio-management',
-        key: 'portfolio-management',
+        menu: 'DeFi Strategies',
+        link: '/features/defi-strategies',
+        key: 'defi-strategies',
         color: 'purple',
     },
     {
@@ -76,8 +76,8 @@ export const ourPracticeAreas = [
         link: '/features/smart-contracts',
     },
     {
-        title: 'Portfolio Management',
-        link: '/features/portfolio-management',
+        title: 'DeFi Strategies',
+        link: '/features/defi-strategies',
     },
     {
         title: 'UI/UX & Front-End',
