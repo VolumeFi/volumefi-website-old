@@ -14,6 +14,8 @@ import photoErik from '@images/team/erik.png';
 import photoKofi from '@images/team/kofi.png';
 import photoVitaliy from '@images/team/vitaliy.png';
 import photoJoseph from '@images/team/joseph.png';
+import photoCiaran from '@images/team/ciaran.png';
+import photoRian from '@images/team/rian.png';
 
 import photoBlank from '@images/team/blank.png';
 
@@ -155,11 +157,6 @@ export const team = [
         photo: photoSteven,
     },
     {
-        name: 'Erik Mayo',
-        title: 'DeFi Strategies',
-        photo: photoErik,
-    },
-    {
         name: 'Unique Divine',
         title: 'Data Science',
         photo: photoUnique,
@@ -175,6 +172,11 @@ export const team = [
         photo: photoJoseph,
     },
     {
+        name: 'Joyce Hermosilla',
+        title: 'UI/UX & Front-End',
+        photo: photoJoyce,
+    },
+    {
         name: 'Jack Lu',
         title: 'UI/UX & Front-End',
         photo: photoJack,
@@ -185,9 +187,19 @@ export const team = [
         photo: photoJason,
     },
     {
-        name: 'Joyce Hermosilla',
-        title: 'UI/UX & Front-End',
-        photo: photoJoyce,
+        name: 'Erik Mayo',
+        title: 'DeFi Strategies',
+        photo: photoErik,
+    },
+    {
+        name: 'Ciaran Hughes',
+        title: 'DeFi Strategies',
+        photo: photoCiaran,
+    },
+    {
+        name: 'Rian Hughes',
+        title: 'DeFi Strategies',
+        photo: photoRian,
     },
 ]
 
