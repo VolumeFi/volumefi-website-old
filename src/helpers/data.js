@@ -156,7 +156,7 @@ export const team = [
     },
     {
         name: 'Erik Mayo',
-        title: 'Portfolio Management',
+        title: 'DeFi Strategies',
         photo: photoErik,
     },
     {
