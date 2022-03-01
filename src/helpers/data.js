@@ -3,19 +3,14 @@ import photoSteven from '@images/team/steven.png';
 import photoWilliam from '@images/team/william.png';
 import photoJack from '@images/team/jack.png';
 import photoJoyce from '@images/team/joyce.png';
-import photoUnique from '@images/team/unique.png';
-import photoSunand from '@images/team/sunand.png';
-import photoBryan from '@images/team/bryan.png';
-import photoMario from '@images/team/mario.png';
-import photoMantas from '@images/team/mantas.png';
 import photoMichael from '@images/team/michael.png';
 import photoJason from '@images/team/jason.png';
 import photoErik from '@images/team/erik.png';
 import photoKofi from '@images/team/kofi.png';
-import photoVitaliy from '@images/team/vitaliy.png';
-import photoJoseph from '@images/team/joseph.png';
-import photoCiaran from '@images/team/ciaran.png';
-import photoRian from '@images/team/rian.png';
+import photoMatija from '@images/team/matija.png';
+import photoNico from '@images/team/nikolas.png';
+import photoZhibai from '@images/team/zhibai.png';
+import photoVera from '@images/team/vera.png';
 
 import photoBlank from '@images/team/blank.png';
 
@@ -113,18 +108,8 @@ export const caseStudy = [
 export const team = [
     {
         name: 'Taariq Lewis',
-        title: 'Marketing, BizDev & Community',
+        title: 'Marketing BizDev & Community',
         photo: photoTarriq,
-    },
-    {
-        name: 'Bryan Colligan',
-        title: 'Marketing, BizDev & Community',
-        photo: photoBryan,
-    },
-    {
-        name: 'Mario Thiel',
-        title: 'Marketing, BizDev & Community',
-        photo: photoMario,
     },
     {
         name: 'Michael Long',
@@ -137,19 +122,14 @@ export const team = [
         photo: photoKofi,
     },
     {
-        name: 'Vitaliy Levit',
-        title: 'Marketing BizDev & Community',
-        photo: photoVitaliy,
-    },
-    {
-        name: 'Mantas Vidutis',
+        name: 'Matija Martinić',
         title: 'Blockchain Protocols',
-        photo: photoMantas,
+        photo: photoMatija,
     },
     {
-        name: 'William Chang',
-        title: 'Smart Contracts & Audits',
-        photo: photoWilliam,
+        name: 'Nikolas Shoppmeier',
+        title: 'Blockchain Protocols',
+        photo: photoNico,
     },
     {
         name: 'Steven Jung',
@@ -157,19 +137,24 @@ export const team = [
         photo: photoSteven,
     },
     {
-        name: 'Unique Divine',
-        title: 'Data Science',
-        photo: photoUnique,
+        name: 'William Chang',
+        title: 'Smart Contracts & Audits',
+        photo: photoWilliam,
     },
     {
-        name: 'Sunand Raghupathi',
-        title: 'Data Science',
-        photo: photoSunand,
+        name: 'Zhibai Zhang',
+        title: 'DeFi Strategies',
+        photo: photoZhibai,
     },
     {
-        name: 'Joseph Terrigno',
-        title: 'Data Science',
-        photo: photoJoseph,
+        name: 'Erik Mayo',
+        title: 'DeFi Strategies',
+        photo: photoErik,
+    },
+    {
+        name: 'Jason Jacobs',
+        title: 'Data Infrastructure',
+        photo: photoJason,
     },
     {
         name: 'Joyce Hermosilla',
@@ -182,24 +167,9 @@ export const team = [
         photo: photoJack,
     },
     {
-        name: 'Jason Jacobs',
+        name: 'Vera behr',
         title: 'UI/UX & Front-End',
-        photo: photoJason,
-    },
-    {
-        name: 'Erik Mayo',
-        title: 'DeFi Strategies',
-        photo: photoErik,
-    },
-    {
-        name: 'Ciaran Hughes',
-        title: 'DeFi Strategies',
-        photo: photoCiaran,
-    },
-    {
-        name: 'Rian Hughes',
-        title: 'DeFi Strategies',
-        photo: photoRian,
+        photo: photoVera,
     },
 ]
 

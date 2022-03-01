@@ -100,8 +100,6 @@ export default function AboutUsPage() {
             </div>
           ))}
           <div className='team-member'>
-          </div>
-          <div className='team-member'>
             <img src={imgJoinTeam} />
             <Link to='/careers' className='team-member-join'>Join Our Team</Link>
           </div>

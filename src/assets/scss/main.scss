@@ -276,6 +276,8 @@
 
                 &-name {
                     @include heading-h3(black, center, bold);
+                    font-family: $font-family-rubik-bold !important;
+                    font-weight: 700 !important;
 
                     @include respond-to(mobile) {
                        font-size: 17px;
@@ -284,6 +286,8 @@
 
                 &-title {
                     @include text-subtitle($blue-button-bg, center, normal);
+                    font-family: $font-family-rubik !important;
+                    font-weight: 400 !important;
                 }
 
                 &-join {
