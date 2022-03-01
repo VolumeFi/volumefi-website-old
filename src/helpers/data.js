@@ -167,7 +167,7 @@ export const team = [
         photo: photoJack,
     },
     {
-        name: 'Vera behr',
+        name: 'Vera Behr',
         title: 'UI/UX & Front-End',
         photo: photoVera,
     },
