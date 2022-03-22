@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-storyblok',
       options: {
-        accessToken: 'P8ufQwIbOQDBAepwKJsnBAtt',
+        accessToken: 'pdt76VhIbCskVQld3smuqgtt',
         homeSlug: 'home',
         version: 'published',
         mixpanel: 'd6a6208c71b46a6965913df792f505f9'
