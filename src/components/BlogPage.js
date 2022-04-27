@@ -8,6 +8,7 @@ import imgChevronRight from '@images/chevron-right.png';
 import imgLeftArrow from '@images/left-arrow.png';
 
 import { convertDateString } from '../utils/date';
+import { truncate } from '../utils/string';
 
 const windowGlobal = typeof window !== 'undefined' && window
 
@@ -137,7 +138,7 @@ console.log(featuredPosts);
                         {post.content.title}
                       </a>
                       <div className='blog-list-item-divider'></div>
-                      <p className='blog-list-item-intro'>{post.content.intro}</p>
+                      <p className='blog-list-item-intro'>{truncate(post.content.intro, 161)}</p>
                     </div>
                 </div>
                 ))}
