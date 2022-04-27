@@ -74,7 +74,13 @@ ul {
   overflow: hidden;
 }
 
-li { color: purple; }
+// li { color: purple; }
+
+li.storyblok-bullet-li {
+  p {
+    display: inline;
+  }
+}
 
 .blog-container {
   .container__featured-section {

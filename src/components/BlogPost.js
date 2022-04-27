@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import SbEditable from "storyblok-react"
-import { render, NODE_IMAGE } from "storyblok-rich-text-react-renderer"
+import { render, NODE_IMAGE, NODE_UL, NODE_LI } from "storyblok-rich-text-react-renderer"
 import {isMobileOnly} from 'react-device-detect'
 import { navigate } from 'gatsby-link';
 import SEO from "../components/HeadSeo"
@@ -67,11 +67,9 @@ const BlogPost = ({ blok }) => {
 
   morePosts = blok.allPosts ? blok.allPosts.filter(post => post.content.featured == false) : [];
 
-  console.log('***beforesort**');
-  console.log(morePosts);
-  console.log('****beforesort*');
-
-
+  // console.log('***beforesort**');
+  // console.log(morePosts);
+  // console.log('****beforesort*');
 
   for (const post of morePosts)
   {
@@ -83,19 +81,8 @@ const BlogPost = ({ blok }) => {
     }
   }
 
-  console.log('***morePosts**');
   morePosts.sort(function(a, b) { return a.ordering - b.ordering });
-  //morePosts.sort(function(a, b){return parseInt(a.content.created_at.split(" ")[0].replace(/-/g, '')) - parseInt(b.content.created_at.split(" ")[0].replace(/-/g, ''))});
-
-  console.log(morePosts);
-console.log('***morePosts**');
-
-
-  //console.log('***morePosts**');
-  //console.log(morePosts);
-  //console.log('****morePosts*');
-  const text = 'Check this article out.';
-
+ 
   return (
 
     <SbEditable content={blok} key={blok._uid}>
@@ -108,7 +95,9 @@ console.log('***morePosts**');
           <div className='page-blogs-details-intro'>
             {render(blok.long_text, {
               nodeResolvers: {
-                [NODE_IMAGE]: (children, props) => <img {...props} style={{borderRadius: '0px', maxWidth: '100%'}}/>
+                [NODE_IMAGE]: (children, props) => <img {...props} style={{borderRadius: '0px', maxWidth: '100%'}}/>,
+                [NODE_UL]: (children, props) => <ul {...props} style={{ listStyleType: 'square', listStylePosition: 'inside', paddingBottom: 16, paddingLeft: 16}}>{children}</ul>,
+                [NODE_LI]: (children, props) => <li {...props} className="storyblok-bullet-li" >{children}</li>
               },
               blokResolvers: {
                 ['YouTube-blogpost']: (props) => (
