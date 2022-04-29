@@ -1,810 +1,810 @@
-@import 'global';
+@import "global";
 
 .page-container {
-    width: 100%;
+  width: 100%;
 }
 
 .section {
-    width: 100%;
-    border-radius: 4px;
-    padding-left: 80px;
-    padding-right: 80px;
-    margin-bottom: 12px;
+  width: 100%;
+  border-radius: 4px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-bottom: 12px;
 
-    @include respond-to(mobile) {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
+  @include respond-to(mobile) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
-    &-column {
-        display: flex;
-        flex-direction: column;
-    }
+  &-column {
+    display: flex;
+    flex-direction: column;
+  }
 
-    &-row {
-        display: flex;
-    }
+  &-row {
+    display: flex;
+  }
 
-    &-black {
-        background: black;
-        color: $white;
-    }
+  &-black {
+    background: black;
+    color: $white;
+  }
 
-    &-white {
-        background: $white;
-        color: $blue-button-bg;
-    }
+  &-white {
+    background: $white;
+    color: $blue-button-bg;
+  }
 
-    &-blue {
-        background: $blue-button-bg;
-        color: $white;
-    }
+  &-blue {
+    background: $blue-button-bg;
+    color: $white;
+  }
 }
 
 .page-aboutus {
-    &-top {
-        align-items: center;
-        justify-content: center;
-        height: 478px;
+  &-top {
+    align-items: center;
+    justify-content: center;
+    height: 478px;
 
-        span {
-            @include text-subtitle($white, center);
-        }
-
-        img {
-            max-width: 673px;
-            width: 100%;
-        }
-
-        p {
-            padding-top: 18px;
-            max-width: 640px;
-            @include text-body($white, center);
-        }
+    span {
+      @include text-subtitle($white, center);
     }
 
-    &-why {
+    img {
+      max-width: 673px;
+      width: 100%;
+    }
+
+    p {
+      padding-top: 18px;
+      max-width: 640px;
+      @include text-body($white, center);
+    }
+  }
+
+  &-why {
+    display: flex;
+    padding-bottom: 82px;
+
+    @include respond-to(mobile) {
+      flex-direction: column;
+    }
+
+    &-left {
+      flex: 1;
+      padding: 129px 20px 0px 20px;
+
+      @include respond-to(mobile) {
+        padding: 100px 0px 0px 0px;
+      }
+
+      h1 {
+        @include heading-h1($blue-button-bg, left);
+      }
+      p {
+        padding-top: 58px;
+        @include text-body($blue-button-bg, left);
+
+        @include respond-to(mobile) {
+          padding-top: 25px;
+        }
+      }
+    }
+    &-right {
+      flex: 1;
+      margin-left: 30px;
+      padding: 144px 20px 0px 20px;
+
+      @include respond-to(mobile) {
+        padding: 44px 0px 0px 0px;
+        margin-left: 0px;
+      }
+
+      h3 {
+        @include heading-h3($blue-button-bg, left);
+        margin-bottom: 44px;
+
+        @include respond-to(mobile) {
+          margin-bottom: 30px;
+        }
+      }
+
+      .practice-area-item {
+        border-radius: 4.77273px;
+        border: 1px solid $blue-button-bg;
+        min-height: 35px;
         display: flex;
-        padding-bottom: 82px;
-
-        @include respond-to(mobile) {
-            flex-direction: column;
-        }
-
-        &-left {
-            flex: 1;
-            padding: 129px 20px 0px 20px;
-
-            @include respond-to(mobile) {
-                padding: 100px 0px 0px 0px;
-            }
-
-            h1 {
-                @include heading-h1($blue-button-bg, left);
-            }
-            p {
-                padding-top: 58px;
-                @include text-body($blue-button-bg, left);
-
-                @include respond-to(mobile) {
-                    padding-top: 25px;
-                }
-            }
-        }
-        &-right {
-            flex: 1;
-            margin-left: 30px;
-            padding: 144px 20px 0px 20px;
-
-            @include respond-to(mobile) {
-                padding: 44px 0px 0px 0px;
-                margin-left: 0px;
-            }
-
-            h3 {
-                @include heading-h3($blue-button-bg, left);
-                margin-bottom: 44px;
-
-                @include respond-to(mobile) {
-                    margin-bottom: 30px;
-                }
-            }
-
-            .practice-area-item {
-                border-radius: 4.77273px;
-                border: 1px solid $blue-button-bg;
-                min-height: 35px;
-                display: flex;
-                align-items: center;
-                padding-left: 17px;
-                padding-right: 17px;
-                width: fit-content;
-                margin-bottom: 4px;
-                @include text-subtitle($blue-button-bg, left, normal);
-
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-
-    &-study {
-        padding: 90px;
-        width: 100%;
         align-items: center;
+        padding-left: 17px;
+        padding-right: 17px;
+        width: fit-content;
+        margin-bottom: 4px;
+        @include text-subtitle($blue-button-bg, left, normal);
 
-        @include respond-to(mobile) {
-            padding: 78px 30px;
+        &:hover {
+          text-decoration: none;
         }
-
-        &-top {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-
-            @include respond-to(desktop) {
-                flex-direction: row;
-            }
-        }
-        &-left {
-            flex: 1;
-
-            span {
-                @include text-subtitle($white, left, 400);
-            }
-
-            h2 {
-                @include heading-h2($white, left);
-                line-height: 35px;
-                text-transform: capitalize;
-            }
-
-            p {
-                @include text-body($white, left);
-                line-height: 25px;
-                padding-top: 50px;
-            }
-        }
-
-        &-right {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            @include respond-to(mobile) {
-                padding-top: 40px;
-                padding-bottom: 40px;
-            }
-
-            img {
-                width: 410px;
-
-                @include respond-to(mobile) {
-                    width: 80%;
-                }
-            }
-        }
-
-        &-bottom {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin-top: 65px;
-            margin-bottom: 30px;
-            width: 100%;
-
-            @include respond-to(desktop) {
-                flex-direction: row;
-            }
-
-            .case-study-item {
-                border-radius: 4.77273px;
-                border: 1px solid #FFFFFF;
-                flex: 1;
-                height: 239px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                
-                margin-left: 18px;
-                margin-right: 18px;
-                margin-bottom: 14px;
-                padding: 32px 17px 17px;
-                    
-                @include respond-to(desktop) {
-                    padding: 17px;
-                    margin-left: 22px;
-                    margin-bottom: 0px;
-                    margin-right: 0px;
-                }
-
-                &-title {
-                    @include text-subtitle($white, center, normal);
-                    text-transform: capitalize;
-                }
-
-                &-content {
-                    @include text-body($white, center);
-                    margin-top: 20px;
-                }
-
-                &:first-child {
-                    margin-left: 18px;
-
-                    @include respond-to(desktop) {
-                        margin-left: 0px;
-                    }
-                }
-            }
-        }
+      }
     }
-
-    &-team {
-        padding: 80px 147px;
-
-        @include respond-to(mobile) {
-            padding: 100px 30px 80px;
-        }
-
-        h2 {
-            @include heading-h2($blue-button-bg, left);
-        }
-
-        .team {
-            width: 100%;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-
-            &-member {
-                width: 26%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-top: 30px;
-
-                @include respond-to(mobile) {
-                    width: 45%;
-                }
-
-                img {
-                    width: 100%;
-                    max-width: 185px;
-                    margin-bottom: 15px;
-                }
-
-                &-name {
-                    @include heading-h3(black, center, bold);
-                    font-family: $font-family-rubik-bold !important;
-                    font-weight: 700 !important;
-
-                    @include respond-to(mobile) {
-                       font-size: 17px;
-                    }
-                }
-
-                &-title {
-                    @include text-subtitle($blue-button-bg, center, normal);
-                    font-family: $font-family-rubik !important;
-                    font-weight: 400 !important;
-                }
-
-                &-join {
-                    @include text-link($blue-button-bg, center);
-                    border-radius: 4px;
-                    border: 1px solid $blue-button-bg;
-                    padding: 3px 20px;
-
-                    &:hover {
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.page-careers {
-    &-top {
-        width: 100%;
-        padding: 59px 30px 59px 90px;
-
-        @include respond-to(mobile) {
-            padding: 59px 30px 59px 30px;
-        }
-
-        @include respond-to(desktop) {
-            background-image: none !important;
-        }
-
-        @include respond-to(tablet) {
-            background-image: none !important;
-        }
-
-        &-left {
-            flex: 11;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            h1 {
-                @include heading-h1($white, left);
-                margin-bottom: 56px;
-
-                @include respond-to(mobile) {
-                    margin-bottom: 25px;
-                }
-            }
-
-            p {
-                @include text-body($white, left);
-            }
-        }
-
-        &-right {
-            flex: 8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 30px;
-
-            @include respond-to(mobile) {
-                display: none;
-            }
-
-            img {
-                width: 100%;
-            }
-        }
-    }
-
-    &-call {
-        padding: 108px 91px;
-
-        @include respond-to(mobile) {
-            padding: 100px 30px 80px;
-        }
-
-        h2 {
-            @include heading-h2($blue-button-bg, left);
-            text-transform: capitalize;
-            margin-bottom: 62px;
-
-            @include respond-to(mobile) {
-                margin-bottom: 25px;
-            }
-        }
-
-        p {
-            @include text-body($blue-button-bg, left);
-        }
-    }
-
-    &-opportunities {
-        padding: 90px;
-
-        @include respond-to(mobile) {
-            padding: 100px 30px 80px;
-            background-image: none !important;
-        }
-
-        &-top {
-            width: 50%;
-
-            @include respond-to(mobile) {
-                width: 100%;
-            }
-
-            h2 {
-                @include heading-h2($white, left);
-                text-transform: capitalize;
-                margin-bottom: 40px;
-
-                @include respond-to(mobile) {
-                    margin-bottom: 15px;
-                }
-            }
-
-            p {
-                @include text-body($white, left);
-            }
-        }
-
-        &-lever {
-            width: 100%;
-            height: 1400px;
-            border: none;
-            outline: none;
-        }
-
-        &-bottom {
-            width: 100%;
-            display: flex;
-            flex-flow: row wrap;
-            margin-top: 50px;
-    
-            .opportunity-item {
-                width: 50%;
-                margin-bottom: 45px;
-
-                @include respond-to(mobile) {
-                    width: 100%;
-                }
-
-                h3 {
-                    @include heading-h3($white, left, italic);
-                    margin-bottom: 15px;
-                }
-
-                a {
-                    display: block;
-                    @include text-link($white, left);
-                    text-decoration: underline;
-                    line-height: 40px;
-                }
-            }
-        }
-    }
-}
-
-.page-blogs {
-    &-top {
-        height: 360px;
-        justify-content: center;
-        align-items: center;
-
-        h1 {
-            @include heading-extra($white, center);
-        }
-
-        @include respond-to(mobile) {
-            background-size: cover !important;
-        }
-    }
-
-    &-latestbutton {
-        width: 100%;
-        height: 61px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        outline: none;
-        background: $blue-button-bg;
-        color: $white;
-        border-radius: 4.77273px 4.77273px 0px 0px;
-        
-        span {
-            @include heading-h2($white, left);
-        }
-
-        img {
-            height: 13.5px;
-            margin-left: 15px;
-        }
-    }
-
-    &-details {
-        border-radius: 0px 0px 4.77273px 4.77273px;
-        padding: 59px 73px 99px;
-        // margin-top: 500px;
-
-        @include respond-to(mobile) {
-            padding: 25px 30px;
-        }
-
-        &-img {
-            width: 100%;
-            background: #D3D3D3;
-            border-radius: 4.77273px;
-            margin-bottom: 30px;
-
-            // position: fixed;
-            // left: 0px;
-            // top: 0px;
-            // z-index: -1;
-
-            // height: 500px;
-            // object-fit: cover;
-        }
-
-        &-title {
-            @include heading-h1($blue-button-bg, left);
-            text-transform: capitalize;
-        }
-
-        &-subtitle {
-            @include text-subtitle($blue-button-bg, left, normal);
-            color: #000;
-        }
-
-        &-intro {
-            @include text-body(black, left);
-            line-height: 25px;
-            margin-top: 20px;
-        }
-    }
-
-    &-latest {
-        border-radius: 0px 0px 4.77273px 4.77273px;
-        padding: 99px 73px;
-
-        @include respond-to(mobile) {
-            padding: 25px 30px;
-        }
-
-        &-img {
-            width: 100%;
-            background: #D3D3D3;
-            border-radius: 4.77273px;
-            margin-bottom: 30px;
-        }
-        
-
-        &-date {
-            @include text-body($blue-button-bg, left);
-            line-height: 25px;
-        }
-        
-        &-header {
-            @include heading-h1($blue-button-bg, left);
-            text-transform: capitalize;
-        }
-
-        &-subtitle {
-            @include text-subtitle($blue-button-bg, left, normal);
-            color: #000;
-        }
-
-        &-title {
-            @include heading-h2($blue-button-bg, left);
-            text-transform: capitalize;
-            cursor: pointer;
-        }
-
-        &-intro {
-            @include text-body(black, left);
-            line-height: 25px;
-            margin-top: 20px;
-        }
-    }
-
-    &-list {
-        padding: 55px 65px;
-
-        @include respond-to(mobile) {
-            padding: 25px 30px;
-        }
-
-        &-back {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: fit-content;
-            border: none;
-            outline: none;
-            background: $white;
-            @include text-subtitle($blue-button-bg, normal);
-            text-decoration: underline;
-            img {
-                height: 16px;
-                margin-right: 10px;
-            }
-            margin-bottom: 50px;
-        }
-
-        h1 {
-            @include heading-h1($blue-button-bg, left);
-        }
-
-        .blog-list {
-            margin-top: 93px;
-
-            @include respond-to(mobile) {
-                margin-top: 40px;
-            }
-            
-            &-item {
-                padding-bottom: 32px;
-                border-bottom: 2px solid #D3D3D3;
-                display: flex;
-                margin-bottom: 48px;
-
-                @include respond-to(mobile) {
-                    flex-direction: column;
-                }
-
-                &:last-child {
-                    border-bottom: none;
-                }
-
-                &-left {
-                    width: 408px;
-
-                    @include respond-to(mobile) {
-                        width: 100%;
-                        margin-bottom: 20px;
-                    }
-
-                    img {
-                        width: 100%;
-                        height: 250px;
-                        background: #D3D3D3;
-                        border-radius: 4.77273px;
-                        // object-fit: cover;
-                        object-fit: contain;
-                        object-position: top;
-                        background: transparent;
-
-                        @include respond-to(mobile) {
-                            width: 100%;
-                            height: fit-content;
-                        }
-        
-                    }
-                }
-
-                &-right {
-                    flex: 1;
-                    margin-left: 41px;
-                    display: flex;
-                    flex-direction: column;
-
-                    @include respond-to(mobile) {
-                        margin-left: 0px;
-                    }
-    
-                }
-                
-                &-date {
-                    @include text-body($blue-button-bg, left);
-                    line-height: 25px;
-                }
-
-                &-title {
-                    @include heading-h3(black, left, normal);
-                    font-size: 30px;
-                    line-height: 39px;
-                    text-transform: capitalize;
-                    cursor: pointer;
-
-                    @include respond-to(mobile) {
-                        line-height: 30px;
-                    }
-                }
-
-                &-divider {
-                    width: 35px;
-                    height: 5px;
-                    background: $blue-button-bg;
-                    margin: 15px 0px;
-                }
-
-                &-intro {
-                    @include text-body(black, left);
-                    line-height: 25px;
-
-                    @include respond-to(mobile) {
-                        line-height: 20px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.page-features {
-
-    .section {
-        padding: 50px 69px;
-
-        @include respond-to(mobile) {
-            padding: 30px;
-        }
+  }
+
+  &-study {
+    padding: 90px;
+    width: 100%;
+    align-items: center;
+
+    @include respond-to(mobile) {
+      padding: 78px 30px;
     }
 
     &-top {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        padding-bottom: 84px;
-        border-bottom: 1px solid #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @include respond-to(desktop) {
+        flex-direction: row;
+      }
+    }
+    &-left {
+      flex: 1;
+
+      span {
+        @include text-subtitle($white, left, 400);
+      }
+
+      h2 {
+        @include heading-h2($white, left);
+        line-height: 35px;
+        text-transform: capitalize;
+      }
+
+      p {
+        @include text-body($white, left);
+        line-height: 25px;
+        padding-top: 50px;
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include respond-to(mobile) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      img {
+        width: 410px;
 
         @include respond-to(mobile) {
-            flex-direction: column;
-            padding-bottom: 30px;
+          width: 80%;
         }
-
-        &-left {
-            flex: 5;
-            display: flex;
-            align-items: center;
-            padding-right: 26px;
-
-            img {
-                width: 100%;
-            }
-        }
-
-        &-right {
-            flex: 6;
-
-            h1 {
-                @include heading-h1($white, left);
-                margin-bottom: 53px;
-
-                @include respond-to(mobile) {
-                    margin-bottom: 25px;
-                }
-            }
-
-            p {
-                @include text-body($white, left);
-            }
-        }
+      }
     }
 
     &-bottom {
-        padding-top: 84px;
-        padding-bottom: 41px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 65px;
+      margin-bottom: 30px;
+      width: 100%;
+
+      @include respond-to(desktop) {
+        flex-direction: row;
+      }
+
+      .case-study-item {
+        border-radius: 4.77273px;
+        border: 1px solid #ffffff;
+        flex: 1;
+        height: 239px;
         display: flex;
-        flex-flow: row wrap;
+        flex-direction: column;
         justify-content: center;
 
-        @include respond-to(mobile) {
-            flex-flow: column;
+        margin-left: 18px;
+        margin-right: 18px;
+        margin-bottom: 14px;
+        padding: 32px 17px 17px;
+
+        @include respond-to(desktop) {
+          padding: 17px;
+          margin-left: 22px;
+          margin-bottom: 0px;
+          margin-right: 0px;
         }
 
-        @include respond-to(mobile) {
-            padding-top: 42px;
-            padding-bottom: 20px;
+        &-title {
+          @include text-subtitle($white, center, normal);
+          text-transform: capitalize;
         }
 
-        .field-item {
-            border: 1px solid #FFFFFF;
-            border-radius: 4.77273px;
-            padding: 21px 0px;
-            margin-bottom: 29px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: capitalize;
-            min-height: 97px;
-
-            @include heading-h3($white, center, normal);
-
-
-            &.three {
-                width: 31%;
-
-                @include respond-to(mobile) {
-                    width: 100% !important;
-                }
-
-                &:nth-child(2n) {
-                    margin-left: 3.5%;
-                    margin-right: 3.5%;
-
-                    @include respond-to(mobile) {
-                        margin-left: 0px;
-                        margin-right: 0px;
-                    }
-                }
-            }
-
-            &.two {
-                width: 40%;
-                padding: 14px 0px;
-                margin-left: 17px;
-                margin-right: 17px;
-
-                @include respond-to(mobile) {
-                    width: 100% !important;
-                    margin-left: 0px;
-                    margin-right: 0px;
-                }
-            }
+        &-content {
+          @include text-body($white, center);
+          margin-top: 20px;
         }
+
+        &:first-child {
+          margin-left: 18px;
+
+          @include respond-to(desktop) {
+            margin-left: 0px;
+          }
+        }
+      }
     }
+  }
+
+  &-team {
+    padding: 80px 147px;
+
+    @include respond-to(mobile) {
+      padding: 100px 30px 80px;
+    }
+
+    h2 {
+      @include heading-h2($blue-button-bg, left);
+    }
+
+    .team {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      &-member {
+        width: 26%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+
+        @include respond-to(mobile) {
+          width: 45%;
+        }
+
+        img {
+          width: 100%;
+          max-width: 185px;
+          margin-bottom: 15px;
+        }
+
+        &-name {
+          @include heading-h3(black, center, bold);
+          font-family: $font-family-rubik-bold !important;
+          font-weight: 700 !important;
+
+          @include respond-to(mobile) {
+            font-size: 17px;
+          }
+        }
+
+        &-title {
+          @include text-subtitle($blue-button-bg, center, normal);
+          font-family: $font-family-rubik !important;
+          font-weight: 400 !important;
+        }
+
+        &-join {
+          @include text-link($blue-button-bg, center);
+          border-radius: 4px;
+          border: 1px solid $blue-button-bg;
+          padding: 3px 20px;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-careers {
+  &-top {
+    width: 100%;
+    padding: 59px 30px 59px 90px;
+
+    @include respond-to(mobile) {
+      padding: 59px 30px 59px 30px;
+    }
+
+    @include respond-to(desktop) {
+      background-image: none !important;
+    }
+
+    @include respond-to(tablet) {
+      background-image: none !important;
+    }
+
+    &-left {
+      flex: 11;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        @include heading-h1($white, left);
+        margin-bottom: 56px;
+
+        @include respond-to(mobile) {
+          margin-bottom: 25px;
+        }
+      }
+
+      p {
+        @include text-body($white, left);
+      }
+    }
+
+    &-right {
+      flex: 8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30px;
+
+      @include respond-to(mobile) {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &-call {
+    padding: 108px 91px;
+
+    @include respond-to(mobile) {
+      padding: 100px 30px 80px;
+    }
+
+    h2 {
+      @include heading-h2($blue-button-bg, left);
+      text-transform: capitalize;
+      margin-bottom: 62px;
+
+      @include respond-to(mobile) {
+        margin-bottom: 25px;
+      }
+    }
+
+    p {
+      @include text-body($blue-button-bg, left);
+    }
+  }
+
+  &-opportunities {
+    padding: 90px;
+
+    @include respond-to(mobile) {
+      padding: 100px 30px 80px;
+      background-image: none !important;
+    }
+
+    &-top {
+      width: 50%;
+
+      @include respond-to(mobile) {
+        width: 100%;
+      }
+
+      h2 {
+        @include heading-h2($white, left);
+        text-transform: capitalize;
+        margin-bottom: 40px;
+
+        @include respond-to(mobile) {
+          margin-bottom: 15px;
+        }
+      }
+
+      p {
+        @include text-body($white, left);
+      }
+    }
+
+    &-lever {
+      width: 100%;
+      height: 1400px;
+      border: none;
+      outline: none;
+    }
+
+    &-bottom {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      margin-top: 50px;
+
+      .opportunity-item {
+        width: 50%;
+        margin-bottom: 45px;
+
+        @include respond-to(mobile) {
+          width: 100%;
+        }
+
+        h3 {
+          @include heading-h3($white, left, italic);
+          margin-bottom: 15px;
+        }
+
+        a {
+          display: block;
+          @include text-link($white, left);
+          text-decoration: underline;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.page-blogs {
+  &-top {
+    height: 360px;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      @include heading-extra($white, center);
+    }
+
+    @include respond-to(mobile) {
+      background-size: cover !important;
+    }
+  }
+
+  &-latestbutton {
+    width: 100%;
+    height: 61px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    background: $blue-button-bg;
+    color: $white;
+    border-radius: 4.77273px 4.77273px 0px 0px;
+
+    span {
+      @include heading-h2($white, left);
+    }
+
+    img {
+      height: 13.5px;
+      margin-left: 15px;
+    }
+  }
+
+  &-details {
+    border-radius: 0px 0px 4.77273px 4.77273px;
+    padding: 59px 73px 99px;
+    // margin-top: 500px;
+
+    @include respond-to(mobile) {
+      padding: 25px 30px;
+    }
+
+    &-img {
+      width: 100%;
+      background: #d3d3d3;
+      border-radius: 4.77273px;
+      margin-bottom: 30px;
+
+      // position: fixed;
+      // left: 0px;
+      // top: 0px;
+      // z-index: -1;
+
+      // height: 500px;
+      // object-fit: cover;
+    }
+
+    &-title {
+      @include heading-h1($blue-button-bg, left);
+      text-transform: capitalize;
+    }
+
+    &-subtitle {
+      @include text-subtitle($blue-button-bg, left, normal);
+      color: #000;
+    }
+
+    &-intro {
+      @include text-body(black, left);
+      line-height: 25px;
+      margin-top: 20px;
+    }
+  }
+
+  &-latest {
+    border-radius: 0px 0px 4.77273px 4.77273px;
+    padding: 99px 73px;
+
+    @include respond-to(mobile) {
+      padding: 25px 30px;
+    }
+
+    &-img {
+      width: 100%;
+      background: #d3d3d3;
+      border-radius: 4.77273px;
+      margin-bottom: 30px;
+    }
+
+    &-date {
+      @include text-body($blue-button-bg, left);
+      line-height: 25px;
+    }
+
+    &-header {
+      @include heading-h1($blue-button-bg, left);
+      text-transform: capitalize;
+    }
+
+    &-subtitle {
+      @include text-subtitle($blue-button-bg, left, normal);
+      color: #000;
+    }
+
+    &-title {
+      @include heading-h2($blue-button-bg, left);
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+
+    &-intro {
+      @include text-body(black, left);
+      line-height: 25px;
+      margin-top: 20px;
+    }
+  }
+
+  &-list {
+    padding: 55px 65px;
+
+    @include respond-to(mobile) {
+      padding: 25px 30px;
+    }
+
+    &-back {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: fit-content;
+      border: none;
+      outline: none;
+      background: $white;
+      @include text-subtitle($blue-button-bg, normal);
+      text-decoration: underline;
+      img {
+        height: 16px;
+        margin-right: 10px;
+      }
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      @include heading-h1($blue-button-bg, left);
+    }
+
+    .blog-list {
+      margin-top: 93px;
+
+      @include respond-to(mobile) {
+        margin-top: 40px;
+      }
+
+      &-item {
+        padding-bottom: 32px;
+        border-bottom: 2px solid #d3d3d3;
+        display: flex;
+        margin-bottom: 48px;
+
+        @include respond-to(mobile) {
+          flex-direction: column;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &-left {
+          width: 408px;
+
+          @include respond-to(mobile) {
+            width: 100%;
+            margin-bottom: 20px;
+          }
+
+          img {
+            width: 100%;
+            height: 250px;
+            background: #d3d3d3;
+            border-radius: 4.77273px;
+            // object-fit: cover;
+            object-fit: contain;
+            object-position: top;
+            background: transparent;
+
+            @include respond-to(mobile) {
+              width: 100%;
+              height: fit-content;
+            }
+          }
+        }
+
+        &-right {
+          flex: 1;
+          margin-left: 41px;
+          display: flex;
+          flex-direction: column;
+
+          @include respond-to(mobile) {
+            margin-left: 0px;
+          }
+        }
+
+        &-date {
+          @include text-body($blue-button-bg, left);
+          line-height: 25px;
+        }
+
+        &-title {
+          @include heading-h3(black, left, normal);
+          font-size: 30px;
+          line-height: 39px;
+          text-transform: capitalize;
+          cursor: pointer;
+
+          @include respond-to(mobile) {
+            line-height: 30px;
+          }
+        }
+
+        &-divider {
+          width: 35px;
+          height: 5px;
+          background: $blue-button-bg;
+          margin: 15px 0px;
+        }
+
+        &-intro {
+          @include text-body(black, left);
+          line-height: 25px;
+          display: -webkit-box;
+          overflow : hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;  
+
+          @include respond-to(mobile) {
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-features {
+  .section {
+    padding: 50px 69px;
+
+    @include respond-to(mobile) {
+      padding: 30px;
+    }
+  }
+
+  &-top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 84px;
+    border-bottom: 1px solid #ffffff;
+
+    @include respond-to(mobile) {
+      flex-direction: column;
+      padding-bottom: 30px;
+    }
+
+    &-left {
+      flex: 5;
+      display: flex;
+      align-items: center;
+      padding-right: 26px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-right {
+      flex: 6;
+
+      h1 {
+        @include heading-h1($white, left);
+        margin-bottom: 53px;
+
+        @include respond-to(mobile) {
+          margin-bottom: 25px;
+        }
+      }
+
+      p {
+        @include text-body($white, left);
+      }
+    }
+  }
+
+  &-bottom {
+    padding-top: 84px;
+    padding-bottom: 41px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    @include respond-to(mobile) {
+      flex-flow: column;
+    }
+
+    @include respond-to(mobile) {
+      padding-top: 42px;
+      padding-bottom: 20px;
+    }
+
+    .field-item {
+      border: 1px solid #ffffff;
+      border-radius: 4.77273px;
+      padding: 21px 0px;
+      margin-bottom: 29px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: capitalize;
+      min-height: 97px;
+
+      @include heading-h3($white, center, normal);
+
+      &.three {
+        width: 31%;
+
+        @include respond-to(mobile) {
+          width: 100% !important;
+        }
+
+        &:nth-child(2n) {
+          margin-left: 3.5%;
+          margin-right: 3.5%;
+
+          @include respond-to(mobile) {
+            margin-left: 0px;
+            margin-right: 0px;
+          }
+        }
+      }
+
+      &.two {
+        width: 40%;
+        padding: 14px 0px;
+        margin-left: 17px;
+        margin-right: 17px;
+
+        @include respond-to(mobile) {
+          width: 100% !important;
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+    }
+  }
 }

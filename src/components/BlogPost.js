@@ -145,7 +145,7 @@ const BlogPost = ({ blok }) => {
                   </div>
                   <div className="blog-list-item-right">
                     <span className="blog-list-item-date">
-                      {convertDateString(post.published_at)}
+                      {convertDateString(post.first_published_at)}
                     </span>
                     <a
                       onClick={e => {
@@ -157,7 +157,7 @@ const BlogPost = ({ blok }) => {
                       {post.content.title}
                     </a>
                     <div className="blog-list-item-divider"></div>
-                    <p className="blog-list-item-intro">{truncate(post.content.intro, 161)}</p>
+                    <p className="blog-list-item-intro">{post.content.intro}</p>
                   </div>
                 </div>
               ))}

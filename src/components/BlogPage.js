@@ -92,7 +92,7 @@ console.log(featuredPosts);
               <div className='section section-white section-column page-blogs-latest'>
                 <img src={featuredPosts[0].content.image} className='page-blogs-latest-img' />
                 <span className='page-blogs-latest-date'>
-                  {convertDateString(featuredPosts[0].published_at)}
+                  {convertDateString(featuredPosts[0].first_published_at)}
                 </span>
                 <a 
                   onClick={(e) => {
@@ -127,7 +127,7 @@ console.log(featuredPosts);
                       <img src={post.content.image} />
                     </div>
                     <div className='blog-list-item-right'>
-                      <span className='blog-list-item-date'>{convertDateString(post.published_at)}</span>
+                      <span className='blog-list-item-date'>{convertDateString(post.first_published_at)}</span>
                       <a
                         onClick={(e) => {
                           e.preventDefault()
@@ -138,7 +138,7 @@ console.log(featuredPosts);
                         {post.content.title}
                       </a>
                       <div className='blog-list-item-divider'></div>
-                      <p className='blog-list-item-intro'>{truncate(post.content.intro, 161)}</p>
+                      <p className='blog-list-item-intro'>{post.content.intro}</p>
                     </div>
                 </div>
                 ))}

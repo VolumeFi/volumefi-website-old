@@ -29,8 +29,8 @@ export default class extends React.Component {
     {
       let internal = JSON.parse(post.content);
       if(isEmpty(internal.created_at)) {
-        post['ordering'] = parseInt(post.published_at.split("T")[0].replace(/-/g, ''));
-        console.log(parseInt(post.published_at.split("T")[0].replace(/-/g, '')));
+        post['ordering'] = parseInt(post.first_published_at.split("T")[0].replace(/-/g, ''));
+        console.log(parseInt(post.first_published_at.split("T")[0].replace(/-/g, '')));
       } else {
         post['ordering'] = parseInt(internal.created_at.split(" ")[0].replace(/-/g, ''));
       }
