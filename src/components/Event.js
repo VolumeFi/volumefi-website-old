@@ -53,7 +53,7 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
   let s_date;
   let e_date;
 
-  if(event.description.content) {
+  if(event.description) {
     let invite_event = {
       title: event.title,
       description: event.description.content[0].content[0].text
