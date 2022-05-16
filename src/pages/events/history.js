@@ -16,29 +16,33 @@ export default class extends React.Component {
     let content =  []
 
     props.data.stories.edges.forEach((story) => {
-      const event = JSON.parse(story.node.content);
+      try {
+        const event = JSON.parse(story.node.content);
 
-      let uid = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 50);
+        let uid = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 50);
 
-      if(story.node.full_slug.includes('events/')) {
-        try {
-          let s_date = new Date(event.start_date.split(" ")[0]);
-          let today = new Date();
+        if (story.node.full_slug.includes('events/')) {
+          try {
+            let s_date = new Date(event.start_date.split(" ")[0]);
+            let today = new Date();
 
-          s_date = new Date(s_date.toLocaleString(undefined));
+            s_date = new Date(s_date.toLocaleString(undefined));
 
-          if (s_date < today) {
-            story.node['uid'] = uid;
+            if (s_date < today) {
+              story.node['uid'] = uid;
 
-            let n_date = new Date(s_date.toLocaleString);
+              let n_date = new Date(s_date.toLocaleString);
 
-            story.node['countDownDate'] = s_date.getTime();
+              story.node['countDownDate'] = s_date.getTime();
 
-            content.push(story.node);
+              content.push(story.node);
+            }
+          } catch (e) {
+            console.log(e);
           }
-        } catch (e) {
-          console.log(e);
         }
+      } catch (e) {
+        console.log(e);
       }
     });
 
