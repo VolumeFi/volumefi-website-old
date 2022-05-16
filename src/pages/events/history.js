@@ -23,7 +23,7 @@ export default class extends React.Component {
 
         if (story.node.full_slug.includes('events/')) {
           try {
-            if(event.start_date !== null) {
+            if(event.start_date) {
               let s_date = new Date(event.start_date.split(" ")[0]);
               let today = new Date();
 
