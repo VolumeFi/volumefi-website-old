@@ -21,19 +21,23 @@ export default class extends React.Component {
       let uid = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 50);
 
       if(story.node.full_slug.includes('events/')) {
-        let s_date = new Date(event.start_date.split(" ")[0]);
-        let today = new Date();
+        try {
+          let s_date = new Date(event.start_date.split(" ")[0]);
+          let today = new Date();
 
-        s_date = new Date(s_date.toLocaleString(undefined));
+          s_date = new Date(s_date.toLocaleString(undefined));
 
-        if (s_date < today) {
-          story.node['uid'] = uid;
+          if (s_date < today) {
+            story.node['uid'] = uid;
 
-          let n_date = new Date(s_date.toLocaleString);
-          
-          story.node['countDownDate'] = s_date.getTime();
+            let n_date = new Date(s_date.toLocaleString);
 
-          content.push(story.node);
+            story.node['countDownDate'] = s_date.getTime();
+
+            content.push(story.node);
+          }
+        } catch (e) {
+          console.log(e);
         }
       }
     });
