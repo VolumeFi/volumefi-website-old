@@ -111,7 +111,7 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
 
     let img_div = "";
     let img_style = "";
-    if (!isEmpty(event.event_image.filename)) {
+    if (event.event_image && !isEmpty(event.event_image.filename)) {
       column_size = "col-md-6";
       img_style = "width:100%";
       img_div =
@@ -145,7 +145,7 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
         <div className='event-detail'>
           {location}
         </div>
-        {!isEmpty(event.event_image.filename) && (
+        {event.event_image && !isEmpty(event.event_image.filename) && (
           <img src={event.event_image.filename} className='event-image' />
         )}
       </div>
