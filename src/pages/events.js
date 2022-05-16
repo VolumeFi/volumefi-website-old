@@ -23,28 +23,34 @@ export default class extends React.Component {
 
       if(story.node.full_slug.includes('events/')) {
         //let s_date = new Date(event.start_date.split(" ")[0]);
-        let today = new Date();
+        try {
+          if(event.start_date) {
+            let today = new Date();
 
-        //s_date = new Date(s_date.toLocaleString(undefined));
-        let date_data = event.start_date.split(" ")
-        let date_str = date_data[0]
-        let start_time = date_data[1]
+            //s_date = new Date(s_date.toLocaleString(undefined));
+            let date_data = event.start_date.split(" ")
+            let date_str = date_data[0]
+            let start_time = date_data[1]
 
-        let utc_str = date_str + "T" + start_time + ":00.000+0000"
+            let utc_str = date_str + "T" + start_time + ":00.000+0000"
 
-        let s_date = new Date(utc_str);
+            let s_date = new Date(utc_str);
 
-        let start_date = s_date.toLocaleDateString(undefined, options);
+            let start_date = s_date.toLocaleDateString(undefined, options);
 
-        //console.log(start_date, today);
+            //console.log(start_date, today);
 
-        if (s_date > today) {
-          story.node['uid'] = uid;
-          let n_date = new Date(s_date.toLocaleString);
+            if (s_date > today) {
+              story.node['uid'] = uid;
+              let n_date = new Date(s_date.toLocaleString);
 
-          story.node['countDownDate'] = s_date.getTime();
+              story.node['countDownDate'] = s_date.getTime();
 
-          content.push(story.node);
+              content.push(story.node);
+            }
+          }
+        } catch (e) {
+          console.log(e);
         }
       }
     });

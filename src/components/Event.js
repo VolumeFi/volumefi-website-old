@@ -53,73 +53,82 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
   let s_date;
   let e_date;
 
-  let invite_event = {
-  title: event.title,
-  description: event.description.content[0].content[0].text
-  };
+  if(event.description) {
+    let invite_event = {
+      title: event.title,
+      description: event.description.content[0].content[0].text
+    };
 
-  if (event.start_date != "") {
-    let date_data = event.start_date.split(" ")
-    let date_str = date_data[0]
-    start_time = date_data[1]
+    if (event.start_date != "") {
+      let date_data = event.start_date.split(" ")
+      let date_str = date_data[0]
+      start_time = date_data[1]
 
-    let utc_str = date_str + "T" + start_time + ":00.000+0000"
+      let utc_str = date_str + "T" + start_time + ":00.000+0000"
 
-    s_date = new Date(utc_str);
+      s_date = new Date(utc_str);
 
-    start_date = s_date.toLocaleDateString(undefined, options);
-    start_time = getTime(s_date);
+      start_date = s_date.toLocaleDateString(undefined, options);
+      start_time = getTime(s_date);
 
-    //start_date = Date(event.start_date.split(" ")[0]).toLocaleDateString(undefined, options)
-  }
-
-  if (event.end_date != "") {
-    let date_data = event.end_date.split(" ")
-    let date_str = date_data[0]
-    end_time = date_data[1]
-
-    let utc_str = date_str + "T" + end_time + ":00.000+0000"
-
-     e_date = new Date(utc_str);
-
-    end_date = e_date.toLocaleDateString(undefined, options);
-    end_time = getTime(e_date);
-  }
-
-  if (start_date != "") {
-    event_dates = <h6>Event Date: &nbsp;&nbsp;<span style={{color: 'white'}}>{start_date}</span></h6>;
-    invite_event.start = event.start_date;
-    event_time = <h6>Event Time: &nbsp;&nbsp;<span style={{color: 'white'}}>{tConvert(start_time)}</span></h6>;
-  }
-
-  if (event.start_date != "" && event.end_date != "") {
-    if (start_time != end_time) {
-      event_time = <h6>Event Time: &nbsp;&nbsp;<span style={{color: 'white'}}>{tConvert(start_time)} to {tConvert(end_time)}</span></h6>;
+      //start_date = Date(event.start_date.split(" ")[0]).toLocaleDateString(undefined, options)
     }
-  }
 
-  if (event.location != "") {
-    if (validUrl.isUri(event.location)){
+    if (event.end_date != "") {
+      let date_data = event.end_date.split(" ")
+      let date_str = date_data[0]
+      end_time = date_data[1]
+
+      let utc_str = date_str + "T" + end_time + ":00.000+0000"
+
+      e_date = new Date(utc_str);
+
+      end_date = e_date.toLocaleDateString(undefined, options);
+      end_time = getTime(e_date);
+    }
+
+    if (start_date != "") {
+      event_dates = <h6>Event Date: &nbsp;&nbsp;<span style={{ color: 'white' }}>{start_date}</span></h6>;
+      invite_event.start = event.start_date;
+      event_time = <h6>Event Time: &nbsp;&nbsp;<span style={{ color: 'white' }}>{tConvert(start_time)}</span></h6>;
+    }
+
+    if (event.start_date != "" && event.end_date != "") {
+      if (start_time != end_time) {
+        event_time = <h6>Event Time: &nbsp;&nbsp;<span
+          style={{ color: 'white' }}>{tConvert(start_time)} to {tConvert(end_time)}</span></h6>;
+      }
+    }
+
+    if (event.location != "") {
+      if (validUrl.isUri(event.location)) {
         location = <h6>Location: &nbsp;&nbsp;<a href={event.location} className="card-link">{event.location}</a></h6>;
-    } else {
+      } else {
         location = <h6>Location: &nbsp;&nbsp;{event.location}</h6>;
+      }
     }
-  }
 
 
-  let img_div = "";
-  let img_style = "";
-  if (!isEmpty(event.event_image.filename)) {
-    column_size = "col-md-6";
-    img_style = "width:100%";
-    img_div = <div className="col-md-6"><img src={event.event_image.filename} style={{width: 100 + '%'}} /><br/><br/></div>;
-  } else {
-    column_size = "col-12";
-  }
+    let img_div = "";
+    let img_style = "";
+    if (event.event_image && !isEmpty(event.event_image.filename)) {
+      column_size = "col-md-6";
+      img_style = "width:100%";
+      img_div =
+        <div className="col-md-6"><img src={event.event_image.filename} style={{ width: 100 + '%' }} /><br /><br />
+        </div>;
+    } else {
+      column_size = "col-12";
+    }
 
-  let add_to_calc = "";
-  if (!history) {
-    add_to_calc = <div title="Add to Calendar" className="addeventatc">Register for Event<span className="start">{ s_date.toLocaleString() }</span><span className="end">{ e_date.toLocaleString() }</span><span className="title">{ event.title }</span><span className="description">{ event.description.content[0].content[0].text }</span><span className="location">{ event.location }</span></div>;
+    let add_to_calc = "";
+    if (!history) {
+      add_to_calc = <div title="Add to Calendar" className="addeventatc">Register for Event<span
+        className="start">{s_date.toLocaleString()}</span><span className="end">{e_date.toLocaleString()}</span><span
+        className="title">{event.title}</span><span
+        className="description">{event.description.content[0].content[0].text}</span><span
+        className="location">{event.location}</span></div>;
+    }
   }
 
   return (
@@ -136,7 +145,7 @@ const Event = ({ blok, history, slug, join_community, uid}) => {
         <div className='event-detail'>
           {location}
         </div>
-        {!isEmpty(event.event_image.filename) && (
+        {event.event_image && !isEmpty(event.event_image.filename) && (
           <img src={event.event_image.filename} className='event-image' />
         )}
       </div>
