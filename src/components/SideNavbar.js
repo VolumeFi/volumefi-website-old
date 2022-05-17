@@ -1,7 +1,7 @@
 import Link from 'gatsby-link'
 import React, { useState, useEffect } from 'react'
 
-import { featureSubMenus } from '@helpers/data'
+import { featureSubMenus, eventSubMenus } from '@helpers/data'
 
 import logoBlueBlack from '@images/logo-blue-black.png'
 
@@ -11,7 +11,9 @@ const featureMenuKeys = featureSubMenus.map((menu) => menu.key);
 
 const SideNavbar = ({ settings, lang, pathname }) => {
   const [menu, setMenu] = useState('about-us');
+
   const [featureMenuOpen, setFeatureMenuOpen] = useState(false);
+  const [eventMenuOpen, setEventMenuOpen] = useState(false);
 
   useEffect(() => {
     let url = '';
@@ -23,6 +25,14 @@ const SideNavbar = ({ settings, lang, pathname }) => {
       if (url.includes(`features/${item.key}`)) {
         setMenu(item.key);
         setFeatureMenuOpen(true);
+        break;
+      }
+    }
+
+    for (const item of eventSubMenus) {
+      if (url.includes(`events/${item.key}`)) {
+        setMenu(item.key);
+        setEventMenuOpen(true);
         break;
       }
     }
@@ -42,6 +52,12 @@ const SideNavbar = ({ settings, lang, pathname }) => {
   const toggleFeatureMenu = (e) => {
     e.preventDefault();
     setFeatureMenuOpen(!featureMenuOpen);
+  }
+
+
+  const toggleEventMenu = (e) => {
+    e.preventDefault();
+    setEventMenuOpen(!eventMenuOpen);
   }
 
   return (
@@ -65,7 +81,7 @@ const SideNavbar = ({ settings, lang, pathname }) => {
                 <ul className='sub-nav-menu'>
                   {featureSubMenus.map((item) => (
                     <Link
-                      key={`features-submenu-${item.link}`}
+                      key={`features-submenu-${item.key}`}
                       className={cn('nav-menu-link', `${item.color}`, { active: menu === item.key })}
                       to={item.link}
                     >
@@ -82,6 +98,27 @@ const SideNavbar = ({ settings, lang, pathname }) => {
               >
                 {`Careers`}
               </Link>
+            </li>
+            <li>
+              <a                
+                className={cn('nav-menu-link', 'blue', { active: eventSubMenus.includes(menu) || eventMenuOpen })}
+                onClick={(e) => toggleEventMenu(e)}
+              >
+                {`Events`}
+              </a>
+              {eventMenuOpen && (
+                <ul className='sub-nav-menu'>
+                  {eventSubMenus.map((item) => (
+                    <Link
+                      key={`events-submenu-${item.key}`}
+                      className={cn('nav-menu-link', `${item.color}`, { active: menu === item.key })}
+                      to={item.link}
+                    >
+                    {item.menu}
+                  </Link>
+                  ))}
+                </ul>
+              )}
             </li>
             <li>
               <Link 

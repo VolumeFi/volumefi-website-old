@@ -158,22 +158,13 @@ exports.createPages = ({ graphql, actions }) => {
           const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
           let event = JSON.parse(entry.node.content);
-          console.log(event);
-          //let s_date = new Date(event.start_date.split(" ")[0]);
-          let uid = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 50);
-          //s_date.setDate(s_date.getDate());
-          let date_str = null;
-          let start_time = null;
+          // console.log('event ***********', event);
 
-          if(event.start_date) {
-            let date_data = event.start_date.split(" ")
-            date_str = date_data[0]
-            start_time = date_data[1]
-          } else {
-            let date_data = event.EventTime.split(" ")
-            date_str = date_data[0]
-            start_time = date_data[1]
-          }
+          let uid = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 50);
+
+          let date_data = event.EventTime.split(" ")
+          let date_str = date_data[0]
+          let start_time = date_data[1]
 
           let utc_str = date_str + "T" + start_time + ":00.000+0000"
 

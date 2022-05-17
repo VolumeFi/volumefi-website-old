@@ -3,7 +3,6 @@ import config from '../../gatsby-config'
 const sbConfig = config.plugins.find((item) => item.resolve === 'gatsby-source-storyblok')
 var Mixpanel = require('mixpanel');
 
-
 class StoryblokService {
   constructor() {
     this.mixpanel = Mixpanel.init(sbConfig.options.mixpanel);

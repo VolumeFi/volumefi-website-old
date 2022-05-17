@@ -50,7 +50,7 @@ export default function CareersPage() {
           <img src={imgMask1} />
         </div>
       </div>
-      <div className='section section-white section- column page-careers-call'>
+      <div className='section section-white section-column page-careers-call'>
         <h2>A call for innovators with a passion for excellence</h2>
         <p>Volume seeks to continue to build it’s team with individuals who consider themselves innovators of the highest calibre and who pursue their craft to be excellent and expect excellence from other team members. Volume’s products and services touch many parts of the decentralized finance space. Individuals who are seeking to make measurable contributions and to be recognized for shipping solutions to very challenging problems will thrive at Volume and beyond. </p>
       </div>

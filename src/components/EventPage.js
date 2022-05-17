@@ -1,55 +1,55 @@
-import React, { useEffect, useState } from 'react'
-import SbEditable from 'storyblok-react'
-import { isMobileOnly } from 'react-device-detect'
-import { navigate } from 'gatsby-link';
-import Event from './Event'
+import React, { useEffect, useState } from "react"
+import SbEditable from "storyblok-react"
+import { isMobileOnly } from "react-device-detect"
+import { navigate } from "gatsby-link"
+import Event from "./Event"
 
-const windowGlobal = typeof window !== 'undefined' && window
+import imgMask3 from "@images/mask-3.png"
+import imgTwitter from "@images/social/twitter.png";
+import imgDiscord from "@images/social/discord.png";
 
-
-const EventPage = ({ blok, title, history, join_community }) => {
-  const events = blok.events.content;
-
-  let see_history = "";
-
-  if (!history) {
-    see_history = <a href="/events/history">See past events</a>
-  } else {
-    see_history = <a href="/events">See upcoming events</a>
-  }
-  //console.log("*********DSJHKFBJ*******");
-  // console.log(events);
-  //console.log(events.sort(function(a, b){return parseInt(JSON.parse(a.content).start_date.split(" ")[0].replace(/-/g, '')) - parseInt(JSON.parse(b.content).start_date.split(" ")[0].replace(/-/g, ''))}));
-  //console.log(events);
-  events.sort(function (a, b) { return parseInt(JSON.parse(a.content).start_date.split(" ")[0].replace(/-/g, '')) - parseInt(JSON.parse(b.content).start_date.split(" ")[0].replace(/-/g, '')) })
-  if (history) { events.reverse(); }
-  console.log(events);
-  //console.log("*********DSJHKFBJ*******");
+const EventPage = ({ events, title, history }) => {
+  console.log(events)
   return (
-    <SbEditable content={blok} key={blok._uid}>
-      <style dangerouslySetInnerHTML={{
-        __html: `
-      a {  color: white; }
-    `}} />
-      <br /><br /><br />
-      <div className="container resource-container">
-        <h1>
-          Upcoming Events
-          {/* <span style={{ float: 'right' }}><a href="/events/history">PAST EVENTS</a></span> */}
-        </h1>
-        <br /><br />
-        {
-          events.map((blok, index) => {
-            const event = JSON.parse(blok.content);
-            //console.log(event);
-            return (<Event key={`event-page-${index}`} blok={event} history={history} slug={blok.full_slug} join_community={join_community} uid={blok.uid} />)
-          })
-        }
-
-        <br />
-        <br />
+    <div className="page-container page-events">
+      <div
+        className="section section-black section-row page-events-top"
+        style={{
+          backgroundImage: `url(${imgMask3})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center center",
+          backgroundSize: "contain",
+        }}
+      >
+        <h1>Events</h1>
       </div>
-    </SbEditable>
+      <div className="section section-black section-row page-events-title">
+        <h2>{title}</h2>
+      </div>
+      {events.length > 0 ? (
+        <div className="section section-white section-column page-events-content">
+          {events.map((item, index) => (
+            <Event event={item} key={`event-${index}`} />
+          ))}
+        </div>
+      ) : (
+        <div className="section section-white section-column page-events-content">
+          <div className="page-events-empty">
+            <p>Volume doesn't have any events planned yet! <br/>Join our community and stay updated on upcoming events.</p>
+            <div className="page-empty-socials">
+              <a href="https://discord.gg/Ebh6YjMShu" target="_blank" className="page-events-social-link">
+                <img src={imgDiscord} alt="Telegram" />
+                <span>Discord</span>
+              </a>
+              <a href="https://twitter.com/volumefi" target="_blank" className="page-events-social-link">
+                <img src={imgTwitter} alt="Twitter" />
+                <span>Twitter</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 export default EventPage

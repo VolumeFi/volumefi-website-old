@@ -4,7 +4,6 @@ import Link from 'gatsby-link'
 import twitterImg from '@images/social/twitter.png'
 import githubImg from '@images/social/github.png'
 import discordImg from '@images/social/discord.png'
-import telegramImg from '@images/social/telegram.png'
 import linkedinImg from '@images/social/linkedin.png'
 
 const Footer = () => {
@@ -22,9 +21,6 @@ const Footer = () => {
             </a>
             <a href='https://discord.gg/Ebh6YjMShu' target='_blank' className='footer-top-social-item'>
               <img src={discordImg} />
-            </a>
-            <a href='https://discord.com/invite/Ebh6YjMShu' target='_blank' className='footer-top-social-item'>
-              <img src={telegramImg} />
             </a>
             <a href='https://www.linkedin.com/company/volumefi/' target='_blank' className='footer-top-social-item'>
               <img src={linkedinImg} />
