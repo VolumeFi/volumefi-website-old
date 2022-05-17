@@ -59,6 +59,21 @@ export const featureSubMenus = [
     },
 ]
 
+export const eventSubMenus = [
+    {
+        menu: 'Upcoming',
+        link: '/events/upcoming-events',
+        key: 'upcoming-events',
+        color: 'blue',
+    },
+    {
+        menu: 'Past',
+        link: '/events/past-events',
+        key: 'past-events',
+        color: 'blue',
+    },
+]
+
 export const ourPracticeAreas = [
     {
         title: 'Blockchain Protocols',

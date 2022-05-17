@@ -12,32 +12,12 @@
 
  function SEO({ description, title, image, content }) {
 
-
-   //const defaults = site.siteMetadata;
-
-   console.log("THE CONTENT");
-   console.log(content);
-   console.log("THE CONTENT");
-
    const metaDescription = content.title;
-
-   //const url = new URL('' || '', defaults.baseUrl);
-
    let metaImage = null;
 
    if(content.event_image) {
      metaImage = content.event_image.filename;
    }
-
-   console.log(metaImage);
-   // if (image) {
-   //   const imageBaseUrl = 'http://a.storyblok.com'
-   //   const imagePath = image.replace('//a.storyblok.com', '')
-   //   metaImage = new URL(imagePath, imageBaseUrl);
-   // }
-   //const author = defaults.author;
-
-   //console.log('---seo---', metaImage);
 
    let pageTitle = metaDescription || "Volume Finance";
 
