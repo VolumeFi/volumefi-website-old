@@ -80,24 +80,24 @@ const SideNavbar = ({ settings, lang, pathname }) => {
               {featureMenuOpen && (
                 <ul className='sub-nav-menu'>
                   {featureSubMenus.map((item) => (
-                    <Link
+                    <a
                       key={`features-submenu-${item.key}`}
                       className={cn('nav-menu-link', `${item.color}`, { active: menu === item.key })}
-                      to={item.link}
+                      href={`https://volume.finance${item.link}`}
                     >
                     {item.menu}
-                  </Link>
+                  </a>
                   ))}
                 </ul>
               )}
             </li>
             <li>
-              <Link 
+              <a 
                 className={cn('nav-menu-link', { active: menu === 'careers' })}
-                to={`/careers/`}
+                href={`https://volume.finance/careers/`}
               >
                 {`Careers`}
-              </Link>
+              </a>
             </li>
             <li>
               <a                
@@ -121,12 +121,12 @@ const SideNavbar = ({ settings, lang, pathname }) => {
               )}
             </li>
             <li>
-              <Link 
+              <a 
                 className={cn('nav-menu-link', { active: menu === 'about-us' })}
-                to={`/about-us/`}
+                href={`https://volume.finance/about-us/`}
               >
                 {`About Us`}
-              </Link>
+              </a>
             </li>
             <li>
               <a href='https://discord.com/invite/Ebh6YjMShu' className='nav-menu-link' target='_blank'>

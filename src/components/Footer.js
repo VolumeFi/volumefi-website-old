@@ -30,9 +30,9 @@ const Footer = () => {
         <div className='footer-top-right'>
           <h2>Careers</h2>
           <p>Come and work with us! We are always looking for great and intelligent people to join our international team.</p>
-          <Link to={`/careers/`} className='link-innovation-career'>
+          <a href={`https://volume.finance/careers/`} className='link-innovation-career'>
             See innovation Opportunities
-          </Link>
+          </a>
         </div>
       </div>
       <div className='footer-bottom'>
