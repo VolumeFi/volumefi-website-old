@@ -22,6 +22,7 @@ import SEO from "../components/Seo"
 // }, 1500);
 
 export default class extends React.Component {
+
   state = {
     story: {
       content: this.props.data.story ? JSON.parse(this.props.data.story.content) : {}
@@ -35,6 +36,10 @@ export default class extends React.Component {
   }
 
   async componentDidMount() {
+    if(typeof window !== "undefined"){
+      window.location.href = "/events/upcoming-events";
+    }
+
     let story = await this.getInitialStory()
     console.log('********************');
     console.log(story);

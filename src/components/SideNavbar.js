@@ -134,12 +134,12 @@ const SideNavbar = ({ settings, lang, pathname }) => {
               </a>
             </li>
             <li>
-              <Link 
+              <a
+                href="https://volume.finance/blog/" 
                 className={cn('nav-menu-link', { active: menu === 'blog' })}
-                to={`/blog/`} 
               >
                 {`Blog`}
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
