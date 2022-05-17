@@ -118,78 +118,75 @@ exports.createPages = ({ graphql, actions }) => {
       })
     )
 
+    // resolve(
+    //   graphql(
+    //     `{
+    //       stories: allStoryblokEntry(filter: {field_component: {eq: "event"}}) {
+    //         edges {
+    //           node {
+    //             id
+    //             name
+    //             slug
+    //             field_component
+    //             full_slug
+    //             content
+    //           }
+    //         }
+    //       }
+    //     }`
+    //   ).then(result => {
+    //     if (result.errors) {
+    //       reject(result.errors)
+    //     }
 
+    //     /*
+    //     let date_data = event.start_date.split(" ")
+    //     let date_str = date_data[0]
+    //     start_time = date_data[1]
 
-    resolve(
-      graphql(
-        `{
-          stories: allStoryblokEntry(filter: {field_component: {eq: "event"}}) {
-            edges {
-              node {
-                id
-                name
-                slug
-                field_component
-                full_slug
-                content
-              }
-            }
-          }
-        }`
-      ).then(result => {
-        if (result.errors) {
-          reject(result.errors)
-        }
+    //     let utc_str = date_str + "T" + start_time + ":00.000+0000"
 
-        /*
-        let date_data = event.start_date.split(" ")
-        let date_str = date_data[0]
-        start_time = date_data[1]
+    //     s_date = new Date(utc_str);
 
-        let utc_str = date_str + "T" + start_time + ":00.000+0000"
+    //     start_date = s_date.toLocaleDateString(undefined, options);
+    //     */
 
-        s_date = new Date(utc_str);
+    //     const entries = result.data.stories.edges
+    //     entries.forEach((entry) => {
+    //       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-        start_date = s_date.toLocaleDateString(undefined, options);
-        */
+    //       let event = JSON.parse(entry.node.content);
+    //       // console.log('event ***********', event);
 
-        const entries = result.data.stories.edges
-        entries.forEach((entry) => {
-          const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    //       let uid = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 50);
 
-          let event = JSON.parse(entry.node.content);
-          // console.log('event ***********', event);
+    //       let date_data = event.EventTime.split(" ")
+    //       let date_str = date_data[0]
+    //       let start_time = date_data[1]
 
-          let uid = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 50);
+    //       let utc_str = date_str + "T" + start_time + ":00.000+0000"
 
-          let date_data = event.EventTime.split(" ")
-          let date_str = date_data[0]
-          let start_time = date_data[1]
+    //       let s_date = new Date(utc_str);
 
-          let utc_str = date_str + "T" + start_time + ":00.000+0000"
+    //       let start_date = s_date.toLocaleDateString(undefined, options);
+    //       console.log("start",s_date,  s_date.getTime());
+    //       entry.node['uid'] = uid;
+    //       entry.node['countDownDate'] = s_date.getTime();
 
-          let s_date = new Date(utc_str);
+    //       if(entry.node.full_slug.includes('events/')) {
+    //         const page = {
+    //           path:  `/${entry.node.full_slug}`,
+    //           component: eventEntry,
+    //           context: {
+    //             story: entry.node
 
-          let start_date = s_date.toLocaleDateString(undefined, options);
-          console.log("start",s_date,  s_date.getTime());
-          entry.node['uid'] = uid;
-          entry.node['countDownDate'] = s_date.getTime();
-
-          if(entry.node.full_slug.includes('events/')) {
-            const page = {
-              path:  `/${entry.node.full_slug}`,
-              component: eventEntry,
-              context: {
-                story: entry.node
-
-              }
-            }
-            createPage(page)
-          }
-        })
-      })
-    )
-
+    //           }
+    //         }
+    //         createPage(page)
+    //       }
+    //     })
+    //   })
+    // )
   })
 
 }
