@@ -2,7 +2,9 @@
 import React from "react"
 
 const EventsPage = () => {
-  window.location.href = "/events/upcoming-events";
+  if(typeof window !== "undefined"){
+    window.location.href = "/events/upcoming-events";
+  }
 
   return (<></>)
 }

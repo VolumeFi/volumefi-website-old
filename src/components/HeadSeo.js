@@ -8,33 +8,15 @@
  import React from "react"
  import PropTypes from "prop-types"
  import { Helmet } from "react-helmet"
- //import { useStaticQuery, graphql } from "gatsby"
  
  function SEO({ description, title, image, content }) {
  
- 
-   //const defaults = site.siteMetadata;
- 
    const metaDescription = content ? content.intro : null;
- 
-   //const url = new URL('' || '', defaults.baseUrl);
  
    let metaImage = content ? content.image : null;
    metaImage = "http:" + metaImage;
-   console.log(metaImage);
-   console.log(metaDescription);
- 
-   // if (image) {
-   //   const imageBaseUrl = 'http://a.storyblok.com'
-   //   const imagePath = image.replace('//a.storyblok.com', '')
-   //   metaImage = new URL(imagePath, imageBaseUrl);
-   // }
-   //const author = defaults.author;
- 
-   //console.log('---seo---', metaImage);
- 
+
    let pageTitle = content ? content.title : "Volume Finance";
-   console.log(pageTitle);
  
    return (
      <Helmet>

@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from "react"
-import SbEditable from "storyblok-react"
-import { isMobileOnly } from "react-device-detect"
-import { navigate } from "gatsby-link"
+import React from "react"
 import Event from "./Event"
 
 import imgMask3 from "@images/mask-3.png"
@@ -9,7 +6,6 @@ import imgTwitter from "@images/social/twitter.png";
 import imgDiscord from "@images/social/discord.png";
 
 const EventPage = ({ events, title, history }) => {
-  console.log(events)
   return (
     <div className="page-container page-events">
       <div

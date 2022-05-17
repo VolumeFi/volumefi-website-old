@@ -13,7 +13,6 @@ const generateEventCalendar = (event) => ({
 });
 
 const Event = ({ event }) => {
-  console.log(event)
   return (
     <div className="event-container">
       <div className="event-header">
