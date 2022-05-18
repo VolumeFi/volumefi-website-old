@@ -258,3 +258,21 @@ export const opportunities = [
         ]
     }
 ]
+
+export const pillars = [
+    {
+        category: "Knowledge Base",
+        title: "Educational Resources",
+        description: "A community driven knowledge base for developers and engineers to learn the skills to build cross chain and meet the partners that can assist along the way."
+    },
+    {
+        category: "Global Community",
+        title: "Build Together",
+        description: "Building alone is boring. As the ccc’s network expands, we’ll have a vibrant community of developers to support builders through every step of the journey."
+    },
+    {
+        category: "Thought Leadership",
+        title: "Thought Leadership",
+        description: "Current relevant topics are discussed through in person panel discussions, virtual AMA, forum round-tables, and networking events."
+    }
+]
