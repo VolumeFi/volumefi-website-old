@@ -4,7 +4,7 @@ import {isMobileOnly} from 'react-device-detect'
 
 import logoBlueBlack from '@images/logo-blue-black.png';
 
-import { featureSubMenus } from '@helpers/data'
+import { featureSubMenus, eventSubMenus } from '@helpers/data'
 
 import cn from 'classnames';
 
@@ -16,6 +16,7 @@ const Header = ({ pathname }) => {
   const [menu, setMenu] = useState('about-us');
   
   const [featureMenuOpen, setFeatureMenuOpen] = useState(false);
+  const [eventMenuOpen, setEventMenuOpen] = useState(false);
 
   useEffect(() => {
     let url = '';
@@ -32,6 +33,14 @@ const Header = ({ pathname }) => {
       }
     }
 
+    for (const item of eventSubMenus) {
+      if (url.includes(`events/${item.key}`)) {
+        setMenu(item.key);
+        setEventMenuOpen(true);
+        break;
+      }
+    }
+
     if (url.includes('careers')) {
       setMenu('careers');
     }
@@ -41,13 +50,11 @@ const Header = ({ pathname }) => {
     if (url.includes('blog')) {
       setMenu('blog');
     }
+    if (url.includes('cross-chain-coalition')) {
+      setMenu('cross-chain-coalition')
+    }
 
   }, []);
-
-  const toggleFeatureMenu = (e) => {
-    e.preventDefault();
-    setFeatureMenuOpen(!featureMenuOpen);
-  }
 
   return (
     <header>
@@ -63,17 +70,17 @@ const Header = ({ pathname }) => {
             <div className='header-menu-mobile-mask' onClick={(e) => { setShowMenu(false) }}>
             </div>
             <div className='header-menu-mobile-panel'>
-              <a 
+              <Link
                 className={cn('header-menu-mobile-item black', { active: featureMenuKeys.includes(menu) || featureMenuOpen })}
-                onClick={(e) => toggleFeatureMenu(e)}
+                to="/features/blockchain-protocols"
               >
                 {`Features`}
-              </a>
+              </Link>
               {featureMenuOpen && (
                 <ul className='sub-nav-mobile-menu'>
                   {featureSubMenus.map((item) => (
                     <Link
-                      key={`features-mobile-submenu-${item.link}`}
+                      key={`features-mobile-submenu-${item.key}`}
                       className={cn('header-menu-mobile-item', `${item.color}`, { active: menu === item.key })}
                       to={item.link}
                     >
@@ -88,6 +95,25 @@ const Header = ({ pathname }) => {
               >
                 {`Careers`}
               </Link>
+              <Link
+                className={cn('header-menu-mobile-item blue', { active: eventSubMenus.includes(menu) || eventMenuOpen })}
+                to="/events/upcoming-events"
+              >
+                {`Events`}
+              </Link>
+              {eventMenuOpen && (
+                <ul className='sub-nav-mobile-menu'>
+                  {eventSubMenus.map((item) => (
+                    <Link
+                      key={`event-mobile-submenu-${item.key}`}
+                      className={cn('header-menu-mobile-item', { active: menu === item.key })}
+                      to={item.link}
+                    >
+                    {item.menu}
+                  </Link>
+                  ))}
+                </ul>
+              )}
               <Link 
                 className={cn('header-menu-mobile-item', { active: menu === 'about-us' })}
                 to={`/about-us/`}
@@ -97,6 +123,12 @@ const Header = ({ pathname }) => {
               <a href='https://discord.com/invite/Ebh6YjMShu' className='header-menu-mobile-item' target='_blank'>
                 Community
               </a>
+              <Link 
+                className={cn('header-menu-mobile-item', { active: menu === 'blog' })}
+                to={`/cross-chain-coalition/`}
+              >
+                {`CCC`}
+              </Link>
               <Link 
                 className={cn('header-menu-mobile-item', { active: menu === 'blog' })}
                 to={`/blog/`}

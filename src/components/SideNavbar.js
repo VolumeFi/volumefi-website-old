@@ -46,19 +46,11 @@ const SideNavbar = ({ settings, lang, pathname }) => {
     if (url.includes('blog')) {
       setMenu('blog');
     }
+    if (url.includes('cross-chain-coalition')) {
+      setMenu('cross-chain-coalition')
+    }
 
   }, []);
-
-  const toggleFeatureMenu = (e) => {
-    e.preventDefault();
-    setFeatureMenuOpen(!featureMenuOpen);
-  }
-
-
-  const toggleEventMenu = (e) => {
-    e.preventDefault();
-    setEventMenuOpen(!eventMenuOpen);
-  }
 
   return (
     <div className='sidenavbar-container'>
@@ -71,12 +63,12 @@ const SideNavbar = ({ settings, lang, pathname }) => {
         <div>
           <ul className='nav-menu'>
             <li>
-              <a                
+              <Link                
                 className={cn('nav-menu-link', 'black', { active: featureMenuKeys.includes(menu) || featureMenuOpen })}
-                onClick={(e) => toggleFeatureMenu(e)}
+                to="/features/blockchain-protocols"
               >
                 {`Features`}
-              </a>
+              </Link>
               {featureMenuOpen && (
                 <ul className='sub-nav-menu'>
                   {featureSubMenus.map((item) => (
@@ -100,12 +92,12 @@ const SideNavbar = ({ settings, lang, pathname }) => {
               </Link>
             </li>
             <li>
-              <a                
+              <Link                
                 className={cn('nav-menu-link', 'blue', { active: eventSubMenus.includes(menu) || eventMenuOpen })}
-                onClick={(e) => toggleEventMenu(e)}
+                to="/events/upcoming-events"
               >
                 {`Events`}
-              </a>
+              </Link>
               {eventMenuOpen && (
                 <ul className='sub-nav-menu'>
                   {eventSubMenus.map((item) => (
@@ -132,6 +124,14 @@ const SideNavbar = ({ settings, lang, pathname }) => {
               <a href='https://discord.com/invite/Ebh6YjMShu' className='nav-menu-link' target='_blank'>
                 {`Community`}
               </a>
+            </li>
+            <li>
+              <Link 
+                className={cn('nav-menu-link', { active: menu === 'cross-chain-coalition' })}
+                to={`/cross-chain-coalition/`}
+              >
+                {`CCC`}
+              </Link>
             </li>
             <li>
               <Link 
