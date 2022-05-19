@@ -56,7 +56,7 @@ const CCC = () => (
           </p>
           <p>
             The CCC aims to expand awareness and increase education for cross
-            chain development. join us in our journey to turn every blockchain
+            chain development. Join us in our journey to turn every blockchain
             engineer into a cross chain engineer.
           </p>
         </div>
@@ -82,7 +82,7 @@ const CCC = () => (
         <img src={imgMask4} />
         <p>
           Our mission is to expand awareness of cross chain communication and
-          cross chain development to drive forward the future of crypto.
+          cross chain development to drive the future of crypto forward.
         </p>
       </div>
     </div>
