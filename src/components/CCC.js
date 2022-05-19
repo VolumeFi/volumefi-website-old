@@ -1,14 +1,14 @@
 import React from "react"
-import Marquee from "react-fast-marquee";
+import Marquee from "react-fast-marquee"
 
 import imgMask4 from "@images/mask-4.png"
 import imgMask5 from "@images/mask-5.png"
 
-import imgFigment from '@images/ccc/figment.png'
-import imgKallisto from '@images/ccc/kallisto.png'
-import imgVolume from '@images/ccc/volume.png'
-import imgPaloma from '@images/ccc/paloma.png'
-import imgUmee from '@images/ccc/umee.png'
+import imgFigment from "@images/ccc/figment.png"
+import imgKallisto from "@images/ccc/kallisto.png"
+import imgVolume from "@images/ccc/volume.png"
+import imgPaloma from "@images/ccc/paloma.png"
+import imgUmee from "@images/ccc/umee.png"
 
 import { pillars } from "../helpers/data"
 
@@ -40,7 +40,7 @@ const CCC = () => (
             innovate for a cross chain world
           </p>
           <a
-            href="https://discord.gg/Ebh6YjMShu"
+            href="https://docs.google.com/forms/d/1fr6EHck8hY8z4RgAlCdRbrqWFdVz-8a6C_YNWSLMTWs/edit"
             target="_blank"
             className="ccc-join-community"
           >
@@ -74,19 +74,14 @@ const CCC = () => (
           all competing for the same future. As invigorating as competition can
           be, we think intra-ecosystem competition is ultimately inefficient. If
           we want to bring the world to crypto, we must first bring crypto to
-          the world{" "}
-          <span style={{ color: "#0046FF", fontStyle: "italic" }}>
-            together
-          </span>
-          . The future of crypto is cross chain.
+          the world together. The future of crypto is cross chain.
         </p>
       </div>
       <div className="page-ccc-history-right">
         <img src={imgMask4} />
         <p>
           Our mission is to expand awareness of cross chain communication and
-          cross chain development to drive forward the{" "}
-          <span style={{ color: " #0046FF" }}>future of crypto</span>.
+          cross chain development to drive forward the future of crypto.
         </p>
       </div>
     </div>
@@ -120,7 +115,7 @@ const CCC = () => (
       ))}
       <div style={{ width: "100%" }}>
         <a
-          href="https://discord.gg/Ebh6YjMShu"
+          href="https://docs.google.com/forms/d/1fr6EHck8hY8z4RgAlCdRbrqWFdVz-8a6C_YNWSLMTWs/edit"
           target="_blank"
           className="ccc-join-community"
         >
