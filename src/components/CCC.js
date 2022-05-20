@@ -10,6 +10,9 @@ import imgVolume from "@images/ccc/volume.png"
 import imgPaloma from "@images/ccc/paloma.png"
 import imgUmee from "@images/ccc/umee.png"
 import imgStrangelove from "@images/ccc/strangelove.png"
+import imgCoindesk from "@images/ccc/coindesk.png"
+import imgQuicknode from "@images/ccc/quicknode.png"
+import imgSimpleVC from "@images/ccc/simplevc.png"
 
 import { pillars } from "../helpers/data"
 
@@ -95,6 +98,9 @@ const CCC = () => (
           <img className="marquee-image" src={imgPaloma} />
           <img className="marquee-image" src={imgUmee} />
           <img className="marquee-image" src={imgStrangelove} />
+          <img className="marquee-image" src={imgCoindesk} />
+          <img className="marquee-image" src={imgQuicknode} />
+          <img className="marquee-image" src={imgSimpleVC} />
         </div>
       </Marquee>
     </div>
