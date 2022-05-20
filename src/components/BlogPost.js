@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useMemo } from "react"
 import SbEditable from "storyblok-react"
 import {
   render,
@@ -6,77 +6,30 @@ import {
   NODE_UL,
   NODE_LI,
 } from "storyblok-rich-text-react-renderer"
-import { isMobileOnly } from "react-device-detect"
 import { navigate } from "gatsby-link"
 import SEO from "../components/HeadSeo"
 import { convertDateString } from "../utils/date"
-import { truncate } from "../utils/string"
-
-const windowGlobal = typeof window !== "undefined" && window
-
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = windowGlobal
-  return {
-    width,
-    height,
-  }
-}
-
-let morePosts = []
 
 const BlogPost = ({ blok }) => {
-  useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions())
+
+  const morePosts = useMemo(() => {
+    if (!blok || !blok.allPosts) {
+      return [];
     }
 
-    windowGlobal.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
+    const posts = blok.allPosts.filter(post => post.content.featured == false)
+    
+    posts.sort((a, b) => {
+      const aTime = new Date(a.first_published_at);
+      const bTime = new Date(b.first_published_at);
 
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  )
+      return aTime.getTime() > bTime.getTime() ? -1 : 1;
+    })
 
-  setTimeout(function () {
-    var href = window.location.href
-    const facebook_url = "https://www.facebook.com/sharer/sharer.php?u=" + href
-    const linkedin_url =
-      "https://www.linkedin.com/shareArticle?mini=true&url=" + href
-    const twitter_url = "http://twitter.com/share?url=" + href
+    return posts;
 
-    const fb = document.getElementById("facebook")
-
-    if (fb) {
-      document.getElementById("facebook").setAttribute("href", facebook_url)
-      document.getElementById("linkedin").setAttribute("href", linkedin_url)
-      document.getElementById("twitter").setAttribute("href", twitter_url)
-    }
-  }, 1500)
-
-  morePosts = blok.allPosts
-    ? blok.allPosts.filter(post => post.content.featured == false)
-    : []
-
-  for (const post of morePosts) {
-    if (post.content.created_at == "") {
-      post["ordering"] = parseInt(
-        post.first_published_at.split("T")[0].replace(/-/g, "")
-      )
-      console.log(
-        parseInt(post.first_published_at.split("T")[0].replace(/-/g, ""))
-      )
-    } else {
-      post["ordering"] = parseInt(
-        post.content.created_at.split(" ")[0].replace(/-/g, "")
-      )
-    }
-  }
-
-  morePosts.sort(function (a, b) {
-    return a.ordering - b.ordering
-  })
-
+  }, [blok])
+  
   return (
     <SbEditable content={blok} key={blok._uid}>
       <SEO
@@ -138,7 +91,7 @@ const BlogPost = ({ blok }) => {
           >
             <h1>Latest Articles</h1>
             <div className="blog-list">
-              {morePosts.reverse().map((post, index) => (
+              {morePosts.map((post, index) => (
                 <div className="blog-list-item" key={`blog-item-${index}`}>
                   <div className="blog-list-item-left">
                     <img src={post.content.image} />
