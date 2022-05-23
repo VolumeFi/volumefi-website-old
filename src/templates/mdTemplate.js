@@ -81,9 +81,6 @@ export const pageQuery = graphql`
         slug
         title
       }
-      tableOfContents(
-          maxDepth: 2
-        )
     }
   }
 `

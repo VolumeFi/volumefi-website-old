@@ -16,6 +16,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
        },
        fallback: {
          fs: false,
+         "url": require.resolve("url/"),
        }
     }
   })
