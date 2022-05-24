@@ -13,6 +13,7 @@ import imgStrangelove from "@images/ccc/strangelove.png"
 import imgCoindesk from "@images/ccc/coindesk.png"
 import imgQuicknode from "@images/ccc/quicknode.png"
 import imgSimpleVC from "@images/ccc/simplevc.png"
+import imgEvmos from "@images/ccc/evmos.png"
 
 import { pillars } from "../helpers/data"
 
@@ -90,7 +91,7 @@ const CCC = () => (
       </div>
     </div>
     <div className="section section-black section-column page-ccc-companies">
-      <Marquee speed={140} gradientColor="transparent" loop={0} delay={0}>
+      <Marquee speed={120} gradientColor="transparent" loop={0} delay={0}>
         <div>
           <img className="marquee-image" src={imgFigment} />
           <img className="marquee-image" src={imgKallisto} />
@@ -101,6 +102,7 @@ const CCC = () => (
           <img className="marquee-image" src={imgCoindesk} />
           <img className="marquee-image" src={imgQuicknode} />
           <img className="marquee-image" src={imgSimpleVC} />
+          <img className="marquee-image" src={imgEvmos} />
         </div>
       </Marquee>
     </div>
