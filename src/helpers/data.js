@@ -11,6 +11,7 @@ import photoMatija from '@images/team/matija.png';
 import photoNico from '@images/team/nikolas.png';
 import photoZhibai from '@images/team/zhibai.png';
 import photoVera from '@images/team/vera.png';
+import photoThelema from '@images/team/thelema.png';
 
 import photoBlank from '@images/team/blank.png';
 
@@ -135,6 +136,11 @@ export const team = [
         name: 'Kofi Kessie',
         title: 'Marketing BizDev & Community',
         photo: photoKofi,
+    },
+    {
+        name: 'Thelema Dietler',
+        title: 'Marketing BizDev & Community',
+        photo: photoThelema,
     },
     {
         name: 'Matija Martinić',
