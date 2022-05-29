@@ -148,11 +148,6 @@ export const team = [
         photo: photoMatija,
     },
     {
-        name: 'Nikolas Shoppmeier',
-        title: 'Blockchain Protocols',
-        photo: photoNico,
-    },
-    {
         name: 'Steven Jung',
         title: 'Smart Contracts & Audits',
         photo: photoSteven,
