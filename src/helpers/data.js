@@ -11,7 +11,7 @@ import photoMatija from '@images/team/matija.png';
 import photoZhibai from '@images/team/zhibai.png';
 import photoVera from '@images/team/vera.png';
 import photoThelema from '@images/team/thelema.png';
-
+import photoChase from '@images/team/Chase.png'
 import photoBlank from '@images/team/blank.png';
 
 export const featureSubMenus = [
@@ -145,6 +145,11 @@ export const team = [
         name: 'Matija Martinić',
         title: 'Blockchain Protocols',
         photo: photoMatija,
+    },
+    {
+        name: 'Chase Albert',
+        title: 'Smart Contracts & Audits',
+        photo: photoChase,
     },
     {
         name: 'Steven Jung',
