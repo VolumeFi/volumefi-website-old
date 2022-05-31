@@ -8,11 +8,10 @@ import photoJason from '@images/team/jason.png';
 import photoErik from '@images/team/erik.png';
 import photoKofi from '@images/team/kofi.png';
 import photoMatija from '@images/team/matija.png';
-import photoNico from '@images/team/nikolas.png';
 import photoZhibai from '@images/team/zhibai.png';
 import photoVera from '@images/team/vera.png';
 import photoThelema from '@images/team/thelema.png';
-
+import photoChase from '@images/team/Chase.png'
 import photoBlank from '@images/team/blank.png';
 
 export const featureSubMenus = [
@@ -148,9 +147,9 @@ export const team = [
         photo: photoMatija,
     },
     {
-        name: 'Nikolas Shoppmeier',
-        title: 'Blockchain Protocols',
-        photo: photoNico,
+        name: 'Chase Albert',
+        title: 'Smart Contracts & Audits',
+        photo: photoChase,
     },
     {
         name: 'Steven Jung',
