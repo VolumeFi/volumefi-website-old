@@ -94,7 +94,7 @@ const CCC = () => (
       </div>
     </div>
     <div className="section section-black section-column page-ccc-companies">
-      <Marquee speed={120} gradientColor="transparent" loop={0} delay={0}>
+      <Marquee speed={100} gradientColor="transparent" loop={0} delay={0}>
         <div>
           <img className="marquee-image" src={imgFigment} />
           <img className="marquee-image" src={imgKallisto} />
