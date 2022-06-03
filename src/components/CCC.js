@@ -14,6 +14,9 @@ import imgCoindesk from "@images/ccc/coindesk.png"
 import imgQuicknode from "@images/ccc/quicknode.png"
 import imgSimpleVC from "@images/ccc/simplevc.png"
 import imgEvmos from "@images/ccc/evmos.png"
+import imgCoinfx from "@images/ccc/coinfx.png"
+import imgKadena from "@images/ccc/kadena.png"
+import imgPhlipIo from "@images/ccc/phlip-io.png"
 
 import { pillars } from "../helpers/data"
 
@@ -91,7 +94,7 @@ const CCC = () => (
       </div>
     </div>
     <div className="section section-black section-column page-ccc-companies">
-      <Marquee speed={120} gradientColor="transparent" loop={0} delay={0}>
+      <Marquee speed={100} gradientColor="transparent" loop={0} delay={0}>
         <div>
           <img className="marquee-image" src={imgFigment} />
           <img className="marquee-image" src={imgKallisto} />
@@ -103,6 +106,9 @@ const CCC = () => (
           <img className="marquee-image" src={imgQuicknode} />
           <img className="marquee-image" src={imgSimpleVC} />
           <img className="marquee-image" src={imgEvmos} />
+          <img className="marquee-image" src={imgCoinfx} />
+          <img className="marquee-image" src={imgKadena} />
+          <img className="marquee-image" src={imgPhlipIo} />
         </div>
       </Marquee>
     </div>
