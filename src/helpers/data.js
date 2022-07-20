@@ -127,11 +127,6 @@ export const team = [
         photo: photoTarriq,
     },
     {
-        name: 'Michael Long',
-        title: 'Marketing BizDev & Community',
-        photo: photoMichael,
-    },
-    {
         name: 'Kofi Kessie',
         title: 'Marketing BizDev & Community',
         photo: photoKofi,
